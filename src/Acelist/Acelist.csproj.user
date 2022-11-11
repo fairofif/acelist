@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="boundary\AccountUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="boundary\BookHistoryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="boundary\ChoosenRoomUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="boundary\CustomerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="boundary\LevelFloorMapUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="boundary\LoginUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="boundary\MainMenuUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="boundary\popupform\EditCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="boundary\popupform\NewBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="boundary\popupform\NewCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="boundary\popupform\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="boundary\RoomAvailabilityUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="boundary\RoomSpecificationUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
