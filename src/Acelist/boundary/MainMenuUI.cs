@@ -49,9 +49,17 @@ namespace Acelist.boundary
                     currentNavbar = (Button)sender;
                     currentNavbar.BackColor = color;
                     currentNavbar.ForeColor = Color.White;
-                    currentNavbar.Font = new System.Drawing.Font("Segoe UI", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+                    currentNavbar.Font = new System.Drawing.Font("Segoe UI", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
                     panelBar.BackColor = color;
-                    panelLogo.BackColor = ColorTheme.ChangeColorBrightness(color, -0.3);
+                    panelMainMenu.BackColor = color;
+                    NavbarButtonAccount.BackColor = color;
+                    NavbarButtonAvailability.BackColor = color;
+                    NavbarButtonBookHistory.BackColor = color;
+                    NavbarButtonCustomer.BackColor = color;
+                    NavbarButtonRooms.BackColor = color;
+                    currentNavbar.BackColor = ColorTheme.ChangeColorBrightness(color, -0.3);
+                    panelLogo.BackColor = color;
+                    panelNavbar.BackColor = color;
                 }
             }
         }
