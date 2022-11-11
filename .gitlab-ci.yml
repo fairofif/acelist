@@ -1,6 +1,8 @@
 variables:
   NUGET_PATH: 'C:\NuGet\nuget.exe'
   MSBUILD_PATH: 'C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\msbuild.exe'
+  XUNIT_PATH: packages\xunit.runner.console.2.3.1\tools\net452
+  UNITTEST_FOLDER: '.\tests\Acelist.Tests\bin\Release\'
 
 stages:
   - build
@@ -17,3 +19,5 @@ build_job:
     expire_in: 2 days
     paths:
       - '.\src\Acelist\bin\Release\Publish\'
+      - '$env:UNITTEST_FOLDER'
+      - '.\$env:XUNIT_PATH\*.*'
