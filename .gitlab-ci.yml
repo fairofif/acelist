@@ -1,23 +1,18 @@
 variables:
-  NUGET_PATH: 'C:\NuGet\nuget.exe'
-  MSBUILD_PATH: 'C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\msbuild.exe'
-  XUNIT_PATH: packages\xunit.runner.console.2.3.1\tools\net452
-  UNITTEST_FOLDER: '.\tests\Acelist.Tests\bin\Release\'
-
+   MSBUILD_PATH: 'C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\msbuild.exe'
+ 
 stages:
   - build
-
+ 
 build_job:
   stage: build
-  only:
-    - branches
+  tags:
+    - test
   script:
-    - '& "$env:NUGET_PATH" restore'
-    - '& "$env:MSBUILD_PATH" /p:Configuration=Release /clp:ErrorsOnly'
-    - '& "$env:MSBUILD_PATH" src\Acelist\Acelist.csproj /p:DeployOnBuild=true /p:Configuration=Release /P:PublishProfile=FolderProfile.pubxml'
+    - '& "$env:MSBUILD_PATH" ".\src\Acelist.sln" /p:Configuration=Release'
   artifacts:
     expire_in: 2 days
     paths:
-      - '.\src\Acelist\bin\Release\Publish\'
-      - '$env:UNITTEST_FOLDER'
-      - '.\$env:XUNIT_PATH\*.*'
+      - '.\src\Acelist\bin\Release\'
+  allow_failure:
+    exit_codes: 2
