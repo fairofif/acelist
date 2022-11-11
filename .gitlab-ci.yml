@@ -1,18 +1,19 @@
 variables:
-   MSBUILD_PATH: 'C:\Windows\Microsoft.NET\Framework64\v4.0.30319\msbuild.exe'
- 
+  NUGET_PATH: 'C:\NuGet\nuget.exe'
+  MSBUILD_PATH: 'C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\msbuild.exe'
+
 stages:
   - build
- 
+
 build_job:
   stage: build
-  tags:
-    - test
+  only:
+    - branches
   script:
-    - '& "$env:MSBUILD_PATH" "src\Acelist.sln" /p:Configuration=Release'
+    - '& "$env:NUGET_PATH" restore'
+    - '& "$env:MSBUILD_PATH" /p:Configuration=Release /clp:ErrorsOnly'
+    - '& "$env:MSBUILD_PATH" src\Acelist\Acelist.csproj /p:DeployOnBuild=true /p:Configuration=Release /P:PublishProfile=FolderProfile.pubxml'
   artifacts:
     expire_in: 2 days
     paths:
-      - 'src\Acelist\bin\Release\'
-  allow_failure:
-    exit_codes: 2
+      - '.\src\Acelist\bin\Release\Publish\'
