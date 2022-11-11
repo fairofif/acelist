@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7R36sZH7i9eCpE5Ef+dZfRZgkSv4B9tuGAREgL3u5RzT6Jm243So1TZ48f9U9JHCbEPa0wMCYTnqOHk5b6QXBg==",
+  "dgSpecHash": "b7tFLtiMcIiui+xeDoScOO2f+unDJZ72hFNrJQH+i3dco8ZpFc6o4qdk5njzzNaGs5f4waRGJkpaQ/ZRnDKeGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rofif\\Dokumen\\ITB\\RPL\\Tubes\\src\\Acelist\\Acelist.csproj",
+  "projectFilePath": "C:\\Users\\rofif\\Dokumen\\ITB\\RPL\\acelist\\src\\Acelist\\Acelist.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

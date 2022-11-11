@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rofif\\Dokumen\\ITB\\RPL\\Tubes\\src\\Acelist\\Acelist.csproj": {}
+    "C:\\Users\\rofif\\Dokumen\\ITB\\RPL\\acelist\\src\\Acelist\\Acelist.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rofif\\Dokumen\\ITB\\RPL\\Tubes\\src\\Acelist\\Acelist.csproj": {
+    "C:\\Users\\rofif\\Dokumen\\ITB\\RPL\\acelist\\src\\Acelist\\Acelist.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rofif\\Dokumen\\ITB\\RPL\\Tubes\\src\\Acelist\\Acelist.csproj",
+        "projectUniqueName": "C:\\Users\\rofif\\Dokumen\\ITB\\RPL\\acelist\\src\\Acelist\\Acelist.csproj",
         "projectName": "Acelist",
-        "projectPath": "C:\\Users\\rofif\\Dokumen\\ITB\\RPL\\Tubes\\src\\Acelist\\Acelist.csproj",
+        "projectPath": "C:\\Users\\rofif\\Dokumen\\ITB\\RPL\\acelist\\src\\Acelist\\Acelist.csproj",
         "packagesPath": "C:\\Users\\rofif\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rofif\\Dokumen\\ITB\\RPL\\Tubes\\src\\Acelist\\obj\\",
+        "outputPath": "C:\\Users\\rofif\\Dokumen\\ITB\\RPL\\acelist\\src\\Acelist\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rofif\\AppData\\Roaming\\NuGet\\NuGet.Config",
