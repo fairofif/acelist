@@ -10,7 +10,7 @@ build_job:
   tags:
     - test
   script:
-    - '& "$env:MSBUILD_PATH" "Acelist.sln" /p:Configuration=Release'
+    - '& "$env:MSBUILD_PATH" ".\src\Acelist.sln" /p:Configuration=Release'
   artifacts:
     expire_in: 2 days
     paths:
