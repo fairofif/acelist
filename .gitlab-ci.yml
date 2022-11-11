@@ -1,5 +1,5 @@
 variables:
-   MSBUILD_PATH: 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe'
+   MSBUILD_PATH: 'C:\Windows\Microsoft.NET\Framework64\v4.0.30319\msbuild.exe'
  
 stages:
   - build
@@ -9,10 +9,10 @@ build_job:
   tags:
     - test
   script:
-    - '& "$env:MSBUILD_PATH" ".\src\Acelist.sln" /p:Configuration=Release'
+    - '& "$env:MSBUILD_PATH" "src\Acelist.sln" /p:Configuration=Release'
   artifacts:
     expire_in: 2 days
     paths:
-      - '.\src\Acelist\bin\Release\'
+      - 'src\Acelist\bin\Release\'
   allow_failure:
     exit_codes: 2
