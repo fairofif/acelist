@@ -54,7 +54,7 @@
             this.panelNavbar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelNavbar.Location = new System.Drawing.Point(0, 0);
             this.panelNavbar.Name = "panelNavbar";
-            this.panelNavbar.Size = new System.Drawing.Size(206, 541);
+            this.panelNavbar.Size = new System.Drawing.Size(206, 724);
             this.panelNavbar.TabIndex = 1;
             // 
             // NavbarButtonAccount
@@ -129,7 +129,7 @@
             // 
             // panelLogo
             // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(86)))));
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
@@ -143,41 +143,43 @@
             this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBar.Location = new System.Drawing.Point(206, 0);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(838, 96);
+            this.panelBar.Size = new System.Drawing.Size(1020, 96);
             this.panelBar.TabIndex = 2;
             // 
             // textTitle
             // 
-            this.textTitle.AutoSize = true;
+            this.textTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textTitle.ForeColor = System.Drawing.SystemColors.Control;
-            this.textTitle.Location = new System.Drawing.Point(36, 28);
+            this.textTitle.Location = new System.Drawing.Point(272, 28);
             this.textTitle.Name = "textTitle";
             this.textTitle.Size = new System.Drawing.Size(454, 38);
             this.textTitle.TabIndex = 3;
-            this.textTitle.Text = "Welcome To Acelist Management";
+            this.textTitle.Text = "Acelist Hotel Management";
+            this.textTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelMainMenu
             // 
+            this.panelMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
             this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainMenu.Location = new System.Drawing.Point(206, 96);
             this.panelMainMenu.Name = "panelMainMenu";
-            this.panelMainMenu.Size = new System.Drawing.Size(838, 445);
+            this.panelMainMenu.Size = new System.Drawing.Size(1020, 628);
             this.panelMainMenu.TabIndex = 3;
             // 
             // MainMenuUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1044, 541);
+            this.ClientSize = new System.Drawing.Size(1226, 724);
             this.Controls.Add(this.panelMainMenu);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.panelNavbar);
             this.Name = "MainMenuUI";
-            this.Text = "Main Menu";
+            this.ShowIcon = false;
+            this.Text = "Acelist";
             this.panelNavbar.ResumeLayout(false);
             this.panelBar.ResumeLayout(false);
-            this.panelBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
