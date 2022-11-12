@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.Logging;
+﻿using Acelist.entities;
+using Microsoft.VisualBasic.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,7 +60,9 @@ namespace Acelist.boundary
         {
             if (this.dropdownLevelFloor.Text == "1" || this.dropdownLevelFloor.Text == "2" || this.dropdownLevelFloor.Text == "3" || this.dropdownLevelFloor.Text == "4")
             {
-                callLevelFloorUI(new LevelFloorMapUI(this.dropdownLevelFloor.Text), sender);
+                Booking booking = new Booking();
+                DateNightBook DNB = new DateNightBook(booking.getArrBookingID(), booking.getArrRoomID(), booking.getArrCheckinTime(), booking.getArrCheckoutTime());
+                callLevelFloorUI(new LevelFloorMapUI(this.dropdownLevelFloor.Text, dateTimePicker1.Value.Date, booking, DNB), sender);
             }
         }
     }
