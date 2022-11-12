@@ -28,3 +28,11 @@ C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\re
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.pdb
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.genruntimeconfig.cache
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\ref\Acelist.dll
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\Release\net6.0-windows\Google.Protobuf.dll
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\Release\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\Release\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\Release\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\Release\net6.0-windows\MySql.Data.dll
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\Release\net6.0-windows\ZstdNet.dll
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\Release\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.csproj.CopyComplete
