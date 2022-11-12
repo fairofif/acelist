@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Acelist.entities;
+using Org.BouncyCastle.Ocsp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,11 +16,65 @@ namespace Acelist.boundary
     public partial class LevelFloorMapUI : Form
     {
         private Button[] arrButton = new Button[30];
-        public LevelFloorMapUI(string floor)
+        Booking booking;
+        DateNightBook DNBook;
+        public LevelFloorMapUI(string floor, DateTime dt, Booking booking, DateNightBook DNBook)
         {
             InitializeComponent();
             setArrButton();
             setButtonText(this.arrButton, floor);
+            this.booking = booking;
+            this.DNBook = DNBook;
+
+            for (int i = 0; i < arrButton.Length; i++)
+            {
+                availabilityPrint(booking, DNBook, dt, arrButton[i]);
+            }
+        }
+
+        private void availabilityPrint(Booking booking, DateNightBook DNBook, DateTime dc, Button btn)
+        {
+            int roomid = Int16.Parse(btn.Text);
+            int i = 0;
+            bool found = false;
+            int bookid_ = -1;
+            while (found == false && i < DNBook.getBookingID().Count)
+            {
+                if (roomid == DNBook.getRoomID()[i] && dc.Day == DNBook.getDateNight()[i].Day && dc.Month == DNBook.getDateNight()[i].Month && dc.Year == DNBook.getDateNight()[i].Year)
+                {
+                    found = true;
+                    bookid_ = DNBook.getBookingID()[i];
+                }
+                i++;          
+            }
+            if (found == true)
+            {
+                bool stats = statusRoom(booking, bookid_);
+                if (stats == true)
+                {
+                    btn.BackColor = Color.FromArgb(97, 6, 26);
+                }
+                else
+                {
+                    btn.BackColor = Color.FromArgb(153, 144, 11);
+                  
+                }
+            }
+        }
+
+        private bool statusRoom(Booking booking, int bookid)
+        {
+            bool found = false;
+            int i = 0;
+            while (found == false && i < booking.getArrBookingID().Count)
+            {
+                if (booking.getArrBookingID()[i] == bookid)
+                {
+                    found=true;
+                }
+                else { i++; }
+            }
+            return booking.getArrHasCheckedIn()[i];
         }
     
         private void setButtonText(Button[] arrButton, string floor)
