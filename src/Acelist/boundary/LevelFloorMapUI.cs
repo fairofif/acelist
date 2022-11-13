@@ -1,5 +1,4 @@
 ﻿using Acelist.entities;
-using Org.BouncyCastle.Ocsp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,18 +18,27 @@ namespace Acelist.boundary
         private Button[] arrButton = new Button[30];
         Booking booking;
         DateNightBook DNBook;
-        public LevelFloorMapUI(string floor, DateTime dt, Booking booking, DateNightBook DNBook)
+
+        private Panel mainmenupanel;
+        private Form activeChoosenRoomUI;
+        private Form availabilityUI;
+        private DateTime dt;
+
+        public LevelFloorMapUI(string floor, DateTime dt, Booking booking, DateNightBook DNBook, Panel mainmenupanel, Form availabilityUI)
         {
             InitializeComponent();
             setArrButton();
             setButtonText(this.arrButton, floor);
             this.booking = booking;
             this.DNBook = DNBook;
+            this.dt = dt;
 
             for (int i = 0; i < arrButton.Length; i++)
             {
                 availabilityPrint(booking, DNBook, dt, arrButton[i]);
             }
+            this.availabilityUI = availabilityUI;
+            this.mainmenupanel = mainmenupanel;
         }
 
         private void availabilityPrint(Booking booking, DateNightBook DNBook, DateTime dc, Button btn)
@@ -50,14 +59,13 @@ namespace Acelist.boundary
             if (found == true)
             {
                 bool stats = statusRoom(booking, bookid_);
-                if (stats == true)
+                if (stats == true) // udah checkin
                 {
                     btn.BackColor = Color.FromArgb(97, 6, 26);
                 }
-                else
+                else // belum checkin
                 {
                     btn.BackColor = Color.FromArgb(153, 144, 11);
-                  
                 }
             }
         }
@@ -124,6 +132,75 @@ namespace Acelist.boundary
             this.arrButton[27] = button28;
             this.arrButton[28] = button29;
             this.arrButton[29] = button30;
+        }
+
+        private void callChoosenRoomUI(Form choosenRoomUI, object sender)
+        {
+            if (activeChoosenRoomUI != null)
+            {
+                activeChoosenRoomUI.Close();
+            }
+            activeChoosenRoomUI = choosenRoomUI;
+            choosenRoomUI.TopLevel = false;
+            choosenRoomUI.FormBorderStyle = FormBorderStyle.None;
+            choosenRoomUI.Dock = DockStyle.Fill;
+            this.availabilityUI.Hide();
+            this.mainmenupanel.Controls.Add(choosenRoomUI);
+            this.mainmenupanel.Tag = choosenRoomUI;
+            choosenRoomUI.BringToFront();
+            choosenRoomUI.Show();
+        }
+
+        private int findBookId(Booking booking, DateNightBook DNB,Button btn)
+        {
+            int i = 0;
+            bool found = false;
+            DateTime datecheck;
+            int bookid = 0;
+            while (found == false && i < DNB.getDateNight().Count)
+            {
+                datecheck = DNB.getDateNight()[i];
+                if (datecheck.Day == dt.Day && datecheck.Month == dt.Month && datecheck.Year == dt.Year)
+                {
+                    bookid = DNB.getBookingID()[i];
+                }
+                int j = 0;
+                while (found == false && j < booking.getArrBookingID().Count)
+                {
+                    if (bookid == booking.getArrBookingID()[j] && booking.getArrRoomID()[j].ToString() == btn.Text)
+                    {
+                        found = true;
+                    }
+                    else
+                    {
+                        j++;
+                    }
+                }
+                if (found == false)
+                {
+                    i++;
+                }
+            }
+            if (found == true)
+            {
+                return bookid;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button1);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button1, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button3);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button3, mainmenupanel, availabilityUI, bid), sender);
         }
     }
 }

@@ -97,7 +97,7 @@ namespace Acelist.boundary
 
         private void NavbarButtonAvailability_Click(object sender, EventArgs e)
         {
-            callUIToPanelMainMenu(new RoomAvailabilityUI(), sender);
+            callUIToPanelMainMenu(new RoomAvailabilityUI(this.panelMainMenu), sender);
         }
 
         private void NavbarButtonBookHistory_Click(object sender, EventArgs e)
