@@ -15,10 +15,12 @@ namespace Acelist.boundary
     public partial class RoomAvailabilityUI : Form
     {
         private Form activeLevelFloorMapUI;
+        private Panel mainmenupanel;
 
-        public RoomAvailabilityUI()
+        public RoomAvailabilityUI(Panel mainmenupanel)
         {
             InitializeComponent();
+            this.mainmenupanel = mainmenupanel;
         }
 
         private void dropdownRoomType_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,7 +64,7 @@ namespace Acelist.boundary
             {
                 Booking booking = new Booking();
                 DateNightBook DNB = new DateNightBook(booking.getArrBookingID(), booking.getArrRoomID(), booking.getArrCheckinTime(), booking.getArrCheckoutTime());
-                callLevelFloorUI(new LevelFloorMapUI(this.dropdownLevelFloor.Text, dateTimePicker1.Value.Date, booking, DNB), sender);
+                callLevelFloorUI(new LevelFloorMapUI(this.dropdownLevelFloor.Text, dateTimePicker1.Value.Date, booking, DNB, this.mainmenupanel, this), sender);
             }
         }
     }
