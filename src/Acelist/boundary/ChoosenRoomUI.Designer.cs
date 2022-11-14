@@ -32,10 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.statusRoom = new System.Windows.Forms.Button();
+            this.buttonCheckedOut = new System.Windows.Forms.Button();
+            this.buttonCheckedIn = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.labelTotalBill = new System.Windows.Forms.Label();
-            this.checkBoxCheckout = new System.Windows.Forms.CheckBox();
-            this.checkBoxCheckin = new System.Windows.Forms.CheckBox();
             this.labelCheckout = new System.Windows.Forms.Label();
             this.labelCheckin = new System.Windows.Forms.Label();
             this.labelReceptionist = new System.Windows.Forms.Label();
@@ -48,7 +49,7 @@
             this.labelBook = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnIdx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnService = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,10 +62,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
+            this.panel1.Controls.Add(this.statusRoom);
+            this.panel1.Controls.Add(this.buttonCheckedOut);
+            this.panel1.Controls.Add(this.buttonCheckedIn);
             this.panel1.Controls.Add(this.buttonRefresh);
             this.panel1.Controls.Add(this.labelTotalBill);
-            this.panel1.Controls.Add(this.checkBoxCheckout);
-            this.panel1.Controls.Add(this.checkBoxCheckin);
             this.panel1.Controls.Add(this.labelCheckout);
             this.panel1.Controls.Add(this.labelCheckin);
             this.panel1.Controls.Add(this.labelReceptionist);
@@ -81,6 +83,47 @@
             this.panel1.Size = new System.Drawing.Size(1117, 227);
             this.panel1.TabIndex = 0;
             // 
+            // statusRoom
+            // 
+            this.statusRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.statusRoom.FlatAppearance.BorderSize = 0;
+            this.statusRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.statusRoom.Location = new System.Drawing.Point(904, 24);
+            this.statusRoom.Name = "statusRoom";
+            this.statusRoom.Size = new System.Drawing.Size(29, 17);
+            this.statusRoom.TabIndex = 16;
+            this.statusRoom.UseVisualStyleBackColor = true;
+            // 
+            // buttonCheckedOut
+            // 
+            this.buttonCheckedOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCheckedOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(87)))), ((int)(((byte)(36)))));
+            this.buttonCheckedOut.FlatAppearance.BorderSize = 0;
+            this.buttonCheckedOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCheckedOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonCheckedOut.Location = new System.Drawing.Point(813, 125);
+            this.buttonCheckedOut.Name = "buttonCheckedOut";
+            this.buttonCheckedOut.Size = new System.Drawing.Size(129, 34);
+            this.buttonCheckedOut.TabIndex = 15;
+            this.buttonCheckedOut.Text = "Checkout";
+            this.buttonCheckedOut.UseVisualStyleBackColor = false;
+            this.buttonCheckedOut.Click += new System.EventHandler(this.buttonCheckedOut_Click);
+            // 
+            // buttonCheckedIn
+            // 
+            this.buttonCheckedIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCheckedIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(87)))), ((int)(((byte)(36)))));
+            this.buttonCheckedIn.FlatAppearance.BorderSize = 0;
+            this.buttonCheckedIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCheckedIn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonCheckedIn.Location = new System.Drawing.Point(667, 125);
+            this.buttonCheckedIn.Name = "buttonCheckedIn";
+            this.buttonCheckedIn.Size = new System.Drawing.Size(129, 34);
+            this.buttonCheckedIn.TabIndex = 14;
+            this.buttonCheckedIn.Text = "Checkin";
+            this.buttonCheckedIn.UseVisualStyleBackColor = false;
+            this.buttonCheckedIn.Click += new System.EventHandler(this.buttonCheckedIn_Click);
+            // 
             // buttonRefresh
             // 
             this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -94,6 +137,7 @@
             this.buttonRefresh.TabIndex = 13;
             this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.UseVisualStyleBackColor = false;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // labelTotalBill
             // 
@@ -105,31 +149,6 @@
             this.labelTotalBill.Size = new System.Drawing.Size(345, 41);
             this.labelTotalBill.TabIndex = 12;
             this.labelTotalBill.Text = "Total Bills: Rp. 7000000";
-            // 
-            // checkBoxCheckout
-            // 
-            this.checkBoxCheckout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBoxCheckout.AutoSize = true;
-            this.checkBoxCheckout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBoxCheckout.Location = new System.Drawing.Point(667, 130);
-            this.checkBoxCheckout.Name = "checkBoxCheckout";
-            this.checkBoxCheckout.Size = new System.Drawing.Size(177, 29);
-            this.checkBoxCheckout.TabIndex = 11;
-            this.checkBoxCheckout.Text = "Already Checkout";
-            this.checkBoxCheckout.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxCheckin
-            // 
-            this.checkBoxCheckin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBoxCheckin.AutoSize = true;
-            this.checkBoxCheckin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBoxCheckin.Location = new System.Drawing.Point(667, 95);
-            this.checkBoxCheckin.Name = "checkBoxCheckin";
-            this.checkBoxCheckin.Size = new System.Drawing.Size(164, 29);
-            this.checkBoxCheckin.TabIndex = 10;
-            this.checkBoxCheckin.Text = "Already Checkin";
-            this.checkBoxCheckin.UseVisualStyleBackColor = true;
-            this.checkBoxCheckin.CheckedChanged += new System.EventHandler(this.checkBoxCheckin_CheckedChanged);
             // 
             // labelCheckout
             // 
@@ -226,6 +245,7 @@
             this.buttonAddService.TabIndex = 2;
             this.buttonAddService.Text = "Add Service";
             this.buttonAddService.UseVisualStyleBackColor = false;
+            this.buttonAddService.Click += new System.EventHandler(this.buttonAddService_Click);
             // 
             // labelRoom
             // 
@@ -279,7 +299,7 @@
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnId,
+            this.ColumnIdx,
             this.ColumnService,
             this.ColumnAmount,
             this.ColumnPrice,
@@ -299,12 +319,13 @@
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(1061, 362);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // ColumnId
+            // ColumnIdx
             // 
-            this.ColumnId.HeaderText = "Id Order";
-            this.ColumnId.MinimumWidth = 8;
-            this.ColumnId.Name = "ColumnId";
+            this.ColumnIdx.HeaderText = "Idx Order";
+            this.ColumnIdx.MinimumWidth = 8;
+            this.ColumnIdx.Name = "ColumnIdx";
             // 
             // ColumnService
             // 
@@ -365,8 +386,6 @@
         private Label labelRoom;
         private Label labelBook;
         private Button buttonAddService;
-        private CheckBox checkBoxCheckout;
-        private CheckBox checkBoxCheckin;
         private Label labelCheckout;
         private Label labelCheckin;
         private Label labelReceptionist;
@@ -376,7 +395,10 @@
         private Button buttonNewBook;
         private Label labelTotalBill;
         private Button buttonRefresh;
-        private DataGridViewTextBoxColumn ColumnId;
+        private Button statusRoom;
+        private Button buttonCheckedOut;
+        private Button buttonCheckedIn;
+        private DataGridViewTextBoxColumn ColumnIdx;
         private DataGridViewTextBoxColumn ColumnService;
         private DataGridViewTextBoxColumn ColumnAmount;
         private DataGridViewTextBoxColumn ColumnPrice;

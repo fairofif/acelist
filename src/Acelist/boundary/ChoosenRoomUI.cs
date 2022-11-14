@@ -1,4 +1,5 @@
-﻿using Acelist.entities;
+﻿using Acelist.boundary.popupform;
+using Acelist.entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,9 @@ namespace Acelist.boundary
         private Panel mainmenupanel;
         private Form availabilityUI;
         private Booking booking = new Booking();
+        private Order orders = new Order();
+        private Menu menus = new Menu();
+        private Room room = new Room();
         private Button roomMapButton;
         private int bookid;
         public ChoosenRoomUI(Button roomMapButton, Panel mainmenupanel, Form availabilityUI, int bookid)
@@ -30,10 +34,14 @@ namespace Acelist.boundary
         }
         private void initialize(Button roomMapButton)
         {
+            this.statusRoom.Enabled = false;
             if (roomMapButton.BackColor == Color.FromArgb(21, 87, 36)) // ijo
             {
-                this.checkBoxCheckin.Enabled = false;
-                this.checkBoxCheckout.Enabled = false;
+                this.dataGridView1.Rows.Clear();
+                this.labelTotalBill.Text = "Total Bills: Rp. XXX";
+                this.statusRoom.BackColor = Color.FromArgb(21, 87, 36);
+                this.buttonCheckedIn.Enabled = false;
+                this.buttonCheckedOut.Enabled = false;
                 this.buttonNewBook.Text = "New Book";
                 this.buttonAddService.Enabled = false;
                 this.buttonBills.Enabled = false;
@@ -47,10 +55,13 @@ namespace Acelist.boundary
             }
             else // kuning atau merah
             {
+                this.dataGridView1.Rows.Clear();
                 int idxBook = booking.findIdx(bookid);
-
-                this.checkBoxCheckin.Enabled = true;
-                this.checkBoxCheckout.Enabled = false;
+                this.labelTotalBill.Text = "Total Bills: Rp. XXX";
+                this.statusRoom.BackColor = Color.FromArgb(153, 144, 11);
+                this.buttonCheckedIn.Enabled = true;
+                this.buttonCheckedOut.Enabled = false;
+                this.buttonCheckedIn.Text = "Checkin";
                 this.buttonNewBook.Text = "Delete Book";
                 this.buttonNewBook.BackColor = Color.FromArgb(97, 6, 26);
                 this.buttonNewBook.Enabled = true;
@@ -67,25 +78,68 @@ namespace Acelist.boundary
 
                 if (roomMapButton.BackColor == Color.FromArgb(97, 6, 26))
                 {
+                    addRowsToTable();
+                    this.labelTotalBill.Text = "Total Bills: Rp. " + totalBills().ToString();
+                    this.buttonNewBook.Enabled = false;
                     if (booking.getArrHasCheckedIn()[idxBook] == true)
                     {
-                        this.checkBoxCheckout.Enabled = true;
+                        this.buttonCheckedOut.Enabled = true;
+                        this.buttonCheckedIn.Text = "Un-Checkin";
+                        this.statusRoom.BackColor = Color.FromArgb(97, 6, 26);
                     }
                     
                     this.buttonAddService.Enabled = true;
                     this.buttonBills.Enabled = true;
                     if (booking.getArrHasCheckedOut()[idxBook] == false)
                     {
-                        this.buttonNewBook.Enabled = false;
+                        this.buttonCheckedOut.Text = "Checkout";
+                        this.buttonAddService.Enabled = true;
+                        this.statusRoom.BackColor = Color.FromArgb(97, 6, 26);
+                    }
+                    else
+                    {
+                        this.buttonCheckedOut.Text = "Un-Checkout";
+                        this.buttonAddService.Enabled = false;
+                        this.statusRoom.BackColor = Color.White;
+                        this.buttonCheckedIn.Enabled = false;
                     }
                 }
             }
         }
 
+        private int totalBills()
+        {
+            int total = 0;
+            for (int i = 0; i < orders.getArrIdx().Count; i++)
+            {
+                if (orders.getArrBookingId()[i] == bookid)
+                {
+                    total += (menus.getPriceFromItemId(orders.getArrItemId()[i]) * orders.getArrAmount()[i]);
+                }
+            }
+            return (total + room.getPriceByRoomId(booking.getRoomIdByBookId(bookid)));
+        }
         private void addRowsToTable()
         {
-            string[] row = { "1", "Spa", "1", "120000" };
-            this.dataGridView1.Rows.Add(row);
+            int itemid;
+            int amount;
+            int idx;
+            string itemname;
+            int itemprice;
+            this.dataGridView1.Rows.Clear();
+            for (int i = 0; i < orders.getArrBookingId().Count; i++)
+            {
+                if (orders.getArrBookingId()[i] == bookid)
+                {
+                    idx = orders.getArrIdx()[i];
+                    itemid = orders.getArrItemId()[i];
+                    amount = orders.getArrAmount()[i];
+                    itemname = menus.getNameFromItemId(itemid);
+                    itemprice = menus.getPriceFromItemId(itemid);
+                    this.dataGridView1.Rows.Add(idx, itemname, amount.ToString(), (itemprice * amount).ToString());
+                    // lanjut disini *REMINDER REMINDER REMINDER*
+                }
+            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -94,19 +148,70 @@ namespace Acelist.boundary
             availabilityUI.Show();
         }
 
-        private void checkBoxCheckin_CheckedChanged(object sender, EventArgs e)
+
+        private void buttonCheckedIn_Click(object sender, EventArgs e)
         {
-            if (this.checkBoxCheckin.Checked == true)
+            if (this.buttonCheckedIn.Text == "Checkin")
             {
+                this.buttonCheckedIn.Text = "Un-Checkin";
+                this.statusRoom.BackColor = Color.FromArgb(97, 6, 26);
                 this.roomMapButton.BackColor = Color.FromArgb(97, 6, 26);
                 booking.updateHasCheckedin(bookid, true);
                 initialize(roomMapButton);
             }
             else
             {
+                this.buttonCheckedIn.Text = "Checkin";
+                this.statusRoom.BackColor = Color.FromArgb(153, 144, 11);
                 this.roomMapButton.BackColor = Color.FromArgb(153, 144, 11);
                 booking.updateHasCheckedin(bookid, false);
                 initialize(roomMapButton);
+            }
+        }
+
+        private void buttonCheckedOut_Click(object sender, EventArgs e)
+        {
+            if (this.buttonCheckedOut.Text == "Checkout")
+            {
+                this.buttonCheckedOut.Text = "Un-Checkout";
+                this.statusRoom.BackColor = Color.White;
+                booking.updateHasCheckedout(bookid, true);
+                initialize(roomMapButton);
+            }
+            else
+            {
+                this.buttonCheckedOut.Text = "Checkout";
+                this.statusRoom.BackColor = Color.FromArgb(97, 6, 26);
+                booking.updateHasCheckedout(bookid, false);
+                initialize(roomMapButton);
+            }
+        }
+
+        private void buttonAddService_Click(object sender, EventArgs e)
+        {
+            Form addOrder = new AddOrder(bookid);
+            addOrder.ShowDialog();
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            booking.Initialize();
+            orders.initialize();
+            initialize(roomMapButton);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 4 && e.RowIndex >= 0)
+            {
+                if (MessageBox.Show("Delete this order?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    int idxdelete = Int32.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    orders.deleteOrder(idxdelete);
+                    initialize(roomMapButton);
+                    MessageBox.Show("Order Deleted, My Prince!");
+                }
+                
             }
         }
     }
