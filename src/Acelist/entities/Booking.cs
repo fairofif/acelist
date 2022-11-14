@@ -44,7 +44,7 @@ namespace Acelist.entities
 
             this.connection = new MySqlConnection(connectionString);
         }
-        private void Initialize()
+        public void Initialize()
         {
             myCon();
 
@@ -339,6 +339,42 @@ namespace Acelist.entities
             Initialize();
         }
 
+        public void updateHasCheckedout(int bookid, bool status)
+        {
+            string sqlQuery;
+            if (status == false)
+            {
+                sqlQuery = "update booking set has_checked_out = false where booking_id = " + bookid.ToString();
+            }
+            else
+            {
+                sqlQuery = "update booking set has_checked_out = true where booking_id = " + bookid.ToString();
+            }
+            connection.Open();
+            MySqlCommand myCommand = new MySqlCommand(sqlQuery, this.connection);
+            myCommand.ExecuteNonQuery();
+            connection.Close();
+
+            Initialize();
+        }
+
+        public int getRoomIdByBookId(int bookid)
+        {
+            int i = 0;
+            bool found = false;
+            while (found == false && i < room_id.Count)
+            {
+                if (booking_id[i] == bookid)
+                {
+                    found = true;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+            return room_id[i];
+        }
     }
 
 }

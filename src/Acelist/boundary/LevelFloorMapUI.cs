@@ -202,5 +202,173 @@ namespace Acelist.boundary
             int bid = findBookId(booking, DNBook, this.button3);
             callChoosenRoomUI(new ChoosenRoomUI(this.button3, mainmenupanel, availabilityUI, bid), sender);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button2);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button2, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button4);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button4, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button5);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button5, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button6);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button6, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button7);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button7, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button8);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button8, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button9);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button9, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button10);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button10, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button11);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button11, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button12);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button12, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button13);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button13, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button14);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button14, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button15);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button15, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button16);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button16, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button22);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button22, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button17);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button17, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button18);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button18, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button19);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button19, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button20);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button20, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button21);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button21, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button23);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button23, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button24);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button24, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button25);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button25, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button26);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button26, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button27);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button27, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button28);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button28, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button29);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button29, mainmenupanel, availabilityUI, bid), sender);
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+            int bid = findBookId(booking, DNBook, this.button30);
+            callChoosenRoomUI(new ChoosenRoomUI(this.button30, mainmenupanel, availabilityUI, bid), sender);
+        }
     }
 }
