@@ -17,7 +17,7 @@ namespace Acelist.entities
             Initialize(bookId, roomId, checkin, checkout);
         }
 
-        private void Initialize(List<int> bookId, List<int> roomId, List<DateTime> checkin, List<DateTime> checkout)
+        public void Initialize(List<int> bookId, List<int> roomId, List<DateTime> checkin, List<DateTime> checkout)
         {
             this.booking_id = new List<int>();
             this.room_id = new List<int>();

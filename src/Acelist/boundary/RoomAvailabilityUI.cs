@@ -21,6 +21,7 @@ namespace Acelist.boundary
         {
             InitializeComponent();
             this.mainmenupanel = mainmenupanel;
+            this.dateTimePicker1.Value = DateTime.Now; 
         }
 
         private void dropdownRoomType_SelectedIndexChanged(object sender, EventArgs e)

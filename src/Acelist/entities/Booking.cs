@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using Acelist.boundary.popupform;
 using MySql.Data.MySqlClient;
 
 namespace Acelist.entities
@@ -62,7 +63,7 @@ namespace Acelist.entities
         private void setArrBookingID()
         {
             this.booking_id = new List<int>();
-            string sqlQuery = "select booking_id from booking";
+            string sqlQuery = "select booking_id from booking order by booking_id";
             MySqlCommand myCommand = new MySqlCommand(sqlQuery, this.connection);
             connection.Open();
             MySqlDataReader myReader;
@@ -89,7 +90,7 @@ namespace Acelist.entities
         private void setArrRoomID()
         {
             this.room_id = new List<int>();
-            string sqlQuery = "select room_id from booking";
+            string sqlQuery = "select room_id from booking order by booking_id";
             MySqlCommand myCommand = new MySqlCommand(sqlQuery, this.connection);
             connection.Open();
             MySqlDataReader myReader;
@@ -116,7 +117,7 @@ namespace Acelist.entities
         private void setArrCustomerID()
         {
             this.customer_id = new List<string>();
-            string sqlQuery = "select customer_id from booking";
+            string sqlQuery = "select customer_id from booking order by booking_id";
             MySqlCommand myCommand = new MySqlCommand(sqlQuery, this.connection);
             connection.Open();
             MySqlDataReader myReader;
@@ -143,7 +144,7 @@ namespace Acelist.entities
         private void setArrEmployeeID()
         {
             this.employee_id = new List<string>();
-            string sqlQuery = "select employee_id from booking";
+            string sqlQuery = "select employee_id from booking order by booking_id";
             MySqlCommand myCommand = new MySqlCommand(sqlQuery, this.connection);
             connection.Open();
             MySqlDataReader myReader;
@@ -170,7 +171,7 @@ namespace Acelist.entities
         private void setArrBookingTime()
         {
             this.booking_time = new List<DateTime>();
-            string sqlQuery = "select booking_time from booking";
+            string sqlQuery = "select booking_time from booking order by booking_id";
             MySqlCommand myCommand = new MySqlCommand(sqlQuery, this.connection);
             connection.Open();
             MySqlDataReader myReader;
@@ -197,7 +198,7 @@ namespace Acelist.entities
         private void setArrCheckinTime()
         {
             this.checkin_time = new List<DateTime>();
-            string sqlQuery = "select checkin_time from booking";
+            string sqlQuery = "select checkin_time from booking order by booking_id";
             MySqlCommand myCommand = new MySqlCommand(sqlQuery, this.connection);
             connection.Open();
             MySqlDataReader myReader;
@@ -224,7 +225,7 @@ namespace Acelist.entities
         private void setArrCheckoutTime()
         {
             this.checkout_time = new List<DateTime>();
-            string sqlQuery = "select checkout_time from booking";
+            string sqlQuery = "select checkout_time from booking order by booking_id";
             MySqlCommand myCommand = new MySqlCommand(sqlQuery, this.connection);
             connection.Open();
             MySqlDataReader myReader;
@@ -251,7 +252,7 @@ namespace Acelist.entities
         private void setArrHasCheckedIn()
         {
             this.has_checked_in = new List<bool>();
-            string sqlQuery = "select has_checked_in from booking";
+            string sqlQuery = "select has_checked_in from booking order by booking_id";
             MySqlCommand myCommand = new MySqlCommand(sqlQuery, this.connection);
             connection.Open();
             MySqlDataReader myReader;
@@ -278,7 +279,7 @@ namespace Acelist.entities
         private void setArrHasCheckedOut()
         {
             this.has_checked_out = new List<bool>();
-            string sqlQuery = "select has_checked_out from booking";
+            string sqlQuery = "select has_checked_out from booking order by booking_id";
             MySqlCommand myCommand = new MySqlCommand(sqlQuery, this.connection);
             connection.Open();
             MySqlDataReader myReader;
@@ -374,6 +375,36 @@ namespace Acelist.entities
                 }
             }
             return room_id[i];
+        }
+
+        public void addBooking(string idCust, string empID, string rid, DateTime bookCreated, DateTime checkin, DateTime checkout)
+        {
+            this.Initialize();
+            string bookid = (booking_id[booking_id.Count - 1]+1).ToString();
+            string roomid = rid;
+            string bookingday = bookCreated.Year.ToString() + "-" + bookCreated.Month.ToString() + "-" + bookCreated.Day.ToString();
+            string checkinday = checkin.Year.ToString() + "-" + checkin.Month.ToString() + "-" + checkin.Day.ToString();
+            string checkoutday = checkout.Year.ToString() + "-" + checkout.Month.ToString() + "-" + checkout.Day.ToString();
+
+            string values = "("+bookid+","+roomid + ",'" + idCust + "','" + empID + "','" + bookingday + "','" + checkinday + "','" + checkoutday + "',false, false)";
+            string query = "insert into booking values " + values;
+
+            connection.Open();
+            MySqlCommand myCommand = new MySqlCommand(query, this.connection);
+            myCommand.ExecuteNonQuery();
+            connection.Close();
+            Initialize();
+        }
+
+        public void deleteBooking(int bookid)
+        {
+            int z = booking_id.Count;
+            string query = "delete from booking where booking_id = " + bookid;
+            connection.Open();
+            MySqlCommand myCommand = new MySqlCommand(query, this.connection);
+            myCommand.ExecuteNonQuery();
+            connection.Close();
+            Initialize();
         }
     }
 
