@@ -22,10 +22,12 @@ namespace Acelist.boundary
         private Room room = new Room();
         private Button roomMapButton;
         private int bookid;
-        public ChoosenRoomUI(Button roomMapButton, Panel mainmenupanel, Form availabilityUI, int bookid)
+        private DateTime dtPickedOnAvailability;
+        public ChoosenRoomUI(Button roomMapButton, Panel mainmenupanel, Form availabilityUI, int bookid, DateTime dt)
         {
             InitializeComponent();
             this.bookid = bookid;
+            this.dtPickedOnAvailability = dt;
             initialize(roomMapButton);
             this.mainmenupanel = mainmenupanel;
             this.availabilityUI = availabilityUI;
@@ -55,6 +57,7 @@ namespace Acelist.boundary
             }
             else // kuning atau merah
             {
+                
                 this.dataGridView1.Rows.Clear();
                 int idxBook = booking.findIdx(bookid);
                 this.labelTotalBill.Text = "Total Bills: Rp. XXX";
@@ -74,8 +77,8 @@ namespace Acelist.boundary
                 this.labelReceptionist.Text = "Receptionist: " + booking.getArrEmployeeID()[idxBook].ToString(); 
                 this.labelTotalBill.Text = "Total Bill: Rp. ###"; // to be implement
                 this.labelRoom.Text = "Room #" + roomMapButton.Text;
-                
 
+                
                 if (roomMapButton.BackColor == Color.FromArgb(97, 6, 26))
                 {
                     addRowsToTable();
@@ -86,6 +89,10 @@ namespace Acelist.boundary
                         this.buttonCheckedOut.Enabled = true;
                         this.buttonCheckedIn.Text = "Un-Checkin";
                         this.statusRoom.BackColor = Color.FromArgb(97, 6, 26);
+                        if (orders.isHasOrder(bookid) == true && buttonCheckedIn.Text == "Un-Checkin")
+                        {
+                            this.buttonCheckedIn.Enabled = false;
+                        }
                     }
                     
                     this.buttonAddService.Enabled = true;
@@ -103,6 +110,7 @@ namespace Acelist.boundary
                         this.statusRoom.BackColor = Color.White;
                         this.buttonCheckedIn.Enabled = false;
                     }
+                    
                 }
             }
         }
@@ -212,6 +220,23 @@ namespace Acelist.boundary
                     MessageBox.Show("Order Deleted, My Prince!");
                 }
                 
+            }
+        }
+
+        private void buttonNewBook_Click(object sender, EventArgs e)
+        {
+            if (this.buttonNewBook.Text == "New Book")
+            {
+                Form newBook = new NewBooking(this, roomMapButton, mainmenupanel, availabilityUI, dtPickedOnAvailability);
+                newBook.ShowDialog();
+            }
+            else
+            {
+                booking.deleteBooking(bookid);
+                MessageBox.Show("Booking Deleted!");
+                roomMapButton.BackColor = Color.FromArgb(21, 87, 36);
+                initialize(roomMapButton);
+
             }
         }
     }

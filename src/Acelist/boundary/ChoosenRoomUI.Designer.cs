@@ -231,6 +231,7 @@
             this.buttonNewBook.TabIndex = 3;
             this.buttonNewBook.Text = "New Book";
             this.buttonNewBook.UseVisualStyleBackColor = false;
+            this.buttonNewBook.Click += new System.EventHandler(this.buttonNewBook_Click);
             // 
             // buttonAddService
             // 

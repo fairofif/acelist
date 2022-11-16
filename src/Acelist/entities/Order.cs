@@ -184,5 +184,23 @@ namespace Acelist.entities
             }
             initialize();
         }
+
+        public bool isHasOrder(int bookid)
+        {
+            int i = 0;
+            bool found = false;
+            while (found == false && i < booking_id.Count)
+            {
+                if (booking_id[i] == bookid)
+                {
+                    found = true;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+            return found;
+        }
     }
 }
