@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acelist.entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,12 +17,15 @@ namespace Acelist.boundary
         private Random random;
         private int tempIndex;
         private Form activeUI;
+        public int idxUsernameUsed;
+        private Receptionist receptionist = new Receptionist();
 
-
-        public MainMenuUI()
+        public MainMenuUI(int idxUsernameUsed)
         {
             InitializeComponent();
             random = new Random();
+            this.idxUsernameUsed = idxUsernameUsed;
+            MessageBox.Show("Welcome to Acelist "+receptionist.getArrName()[idxUsernameUsed]+ "!");
         }
 
         private Color gachaColorTheme()
