@@ -36,10 +36,10 @@ namespace Acelist.entities
 
         private void myCon()
         {
-            this.server = "localhost";
-            this.database = "acelist";
-            this.uid = "root";
-            this.password = "wakacipuy";
+            this.server = "128.199.189.176";
+            this.database = "acelistj_acelist";
+            this.uid = "acelistj_rofif";
+            this.password = "Wakacipuy09";
             string connectionString;
             connectionString = "SERVER=" + this.server + ";" + "DATABASE=" +
             this.database + ";" + "UID=" + this.uid + ";" + "PASSWORD=" + this.password + ";";
