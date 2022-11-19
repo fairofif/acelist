@@ -349,13 +349,14 @@
             // Delete
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(6)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gold;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(6)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.Delete.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Delete.HeaderText = "";
             this.Delete.MinimumWidth = 8;
             this.Delete.Name = "Delete";
