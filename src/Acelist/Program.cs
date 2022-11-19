@@ -10,8 +10,17 @@ namespace Acelist
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            
             ApplicationConfiguration.Initialize();
-            Application.Run(new boundary.MainMenuUI());
+
+            boundary.LoginUI loginui = new boundary.LoginUI("login");
+            Application.Run(loginui);
+
+            if (loginui.loginGranteed == true)
+            {
+                Application.Run(new boundary.MainMenuUI(loginui.idxUsernameUsed));
+            }
+
         }
     }
 }
