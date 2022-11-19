@@ -1,0 +1,18 @@
+variables:
+   MSBUILD_PATH: 'C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\msbuild.exe'
+ 
+stages:
+  - build
+ 
+build_job:
+  stage: build
+  tags:
+    - test
+  script:
+    - '& "$env:MSBUILD_PATH" ".\src\Acelist.sln" /p:Configuration=Release'
+  artifacts:
+    expire_in: 2 days
+    paths:
+      - '.\src\Acelist\bin\Release\'
+  allow_failure:
+    exit_codes: 2

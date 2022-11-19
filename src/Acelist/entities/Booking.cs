@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Acelist.boundary.popupform;
 using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
 
 namespace Acelist.entities
 {
@@ -406,25 +405,6 @@ namespace Acelist.entities
             myCommand.ExecuteNonQuery();
             connection.Close();
             Initialize();
-        }
-
-        public bool isCustExist(string idcust)
-        {
-            Initialize();
-            bool found = false;
-            int i = 0;
-            while (found == false && i < booking_id.Count)
-            {
-                if (customer_id[i].ToString() == idcust)
-                {
-                    found = true;
-                }
-                else
-                {
-                    i++;
-                }
-            }
-            return found;
         }
     }
 

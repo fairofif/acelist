@@ -112,7 +112,7 @@ namespace Acelist.boundary
 
         private void NavbarButtonCustomer_Click(object sender, EventArgs e)
         {
-            callUIToPanelMainMenu(new CustomerUI(this.panelMainMenu), sender);
+            callUIToPanelMainMenu(new CustomerUI(), sender);
         }
 
         private void NavbarButtonAccount_Click(object sender, EventArgs e)

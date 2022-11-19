@@ -1,6 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -167,65 +166,6 @@ namespace Acelist.entities
                 }
             }
             return found;
-        }
-
-        public void addCustomer(string id, string name, string emails, string phones)
-        {
-            string query = "insert into customer values ('" + id + "','" + name + "','" + emails + "','" + phones + "')";
-            connection.Open();
-            MySqlCommand myCommand = new MySqlCommand(query, this.connection);
-            myCommand.ExecuteNonQuery();
-            connection.Close();
-            initialize();
-        }
-
-        public void editWithoutEditId(string id, string name, string emails, string phones)
-        {
-                string query = "update customer set customer_name = '" + name + "', email = '" + emails + "', phone_number = '" + phones + "' where customer_id = '" + id + "'";
-                connection.Open();
-                MySqlCommand myCommand = new MySqlCommand(query, this.connection);
-                myCommand.ExecuteNonQuery();
-                connection.Close();
-                initialize();
-        }
-
-        public void editCust(string idEdited, string id, string name, string emails, string phones)
-        {
-            string query = "update customer set customer_id = '" + id + "', customer_name = '" + name + "', email = '" + emails + "', phone_number = '" + phones + "' where customer_id = '" + idEdited + "'";
-            connection.Open();
-            MySqlCommand myCommand = new MySqlCommand(query, this.connection);
-            myCommand.ExecuteNonQuery();
-            connection.Close();
-            initialize();
-        }
-
-        public bool isIdExist(string id)
-        {
-            initialize();
-            bool found = false;
-            int i = 0;
-            while (found == false && i < customer_id.Count)
-            {
-                if (customer_id[i] == id)
-                {
-                    found = true;
-                }
-                else
-                {
-                    i++;
-                }
-            }
-            return found;
-        }
-
-        public void deleteCust(string id)
-        {
-            string query = "delete from customer where customer_id = '"+id+"'";
-            connection.Open();
-            MySqlCommand myCommand = new MySqlCommand(query, this.connection);
-            myCommand.ExecuteNonQuery();
-            connection.Close();
-            initialize();
         }
     }
 }
