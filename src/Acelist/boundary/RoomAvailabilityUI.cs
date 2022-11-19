@@ -16,12 +16,13 @@ namespace Acelist.boundary
     {
         private Form activeLevelFloorMapUI;
         private Panel mainmenupanel;
-
-        public RoomAvailabilityUI(Panel mainmenupanel)
+        public int idxUsernameUsed;
+        public RoomAvailabilityUI(Panel mainmenupanel, int idxUsernameUsed)
         {
             InitializeComponent();
             this.mainmenupanel = mainmenupanel;
-            this.dateTimePicker1.Value = DateTime.Now; 
+            this.dateTimePicker1.Value = DateTime.Now;
+            this.idxUsernameUsed = idxUsernameUsed;
         }
 
         private void dropdownRoomType_SelectedIndexChanged(object sender, EventArgs e)

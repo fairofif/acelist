@@ -15,15 +15,17 @@ namespace Acelist.boundary
     public partial class ChoosenRoomUI : Form
     {
         private Panel mainmenupanel;
-        private Form availabilityUI;
+        private RoomAvailabilityUI availabilityUI;
         private Booking booking = new Booking();
         private Order orders = new Order();
         private Menu menus = new Menu();
         private Room room = new Room();
+        private Customer customer = new Customer();
+        private Receptionist receptionist = new Receptionist();
         private Button roomMapButton;
         private int bookid;
         private DateTime dtPickedOnAvailability;
-        public ChoosenRoomUI(Button roomMapButton, Panel mainmenupanel, Form availabilityUI, int bookid, DateTime dt)
+        public ChoosenRoomUI(Button roomMapButton, Panel mainmenupanel, RoomAvailabilityUI availabilityUI, int bookid, DateTime dt)
         {
             InitializeComponent();
             this.bookid = bookid;
@@ -73,8 +75,8 @@ namespace Acelist.boundary
                 this.labelBook.Text = "Book #" + this.bookid.ToString();
                 this.labelCheckin.Text = "Checkin Date: " + booking.getArrCheckinTime()[idxBook].ToShortDateString();
                 this.labelCheckout.Text = "Checkout Date: " + booking.getArrCheckoutTime()[idxBook].ToShortDateString();
-                this.labelCustomer.Text = "Customer: " + booking.getArrCustomerID()[idxBook].ToString(); // nanti bagian ini ganti nama
-                this.labelReceptionist.Text = "Receptionist: " + booking.getArrEmployeeID()[idxBook].ToString(); 
+                this.labelCustomer.Text = "Customer: " + customer.getNameFromId(booking.getArrCustomerID()[idxBook].ToString());
+                this.labelReceptionist.Text = "Receptionist: " + receptionist.getNameFromId(booking.getArrEmployeeID()[idxBook].ToString()); 
                 this.labelTotalBill.Text = "Total Bill: Rp. ###"; // to be implement
                 this.labelRoom.Text = "Room #" + roomMapButton.Text;
 

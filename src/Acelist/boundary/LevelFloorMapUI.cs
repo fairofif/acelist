@@ -21,10 +21,10 @@ namespace Acelist.boundary
 
         private Panel mainmenupanel;
         private Form activeChoosenRoomUI;
-        private Form availabilityUI;
+        private RoomAvailabilityUI availabilityUI;
         private DateTime dt;
 
-        public LevelFloorMapUI(string floor, DateTime dt, Booking booking, DateNightBook DNBook, Panel mainmenupanel, Form availabilityUI)
+        public LevelFloorMapUI(string floor, DateTime dt, Booking booking, DateNightBook DNBook, Panel mainmenupanel, RoomAvailabilityUI availabilityUI)
         {
             InitializeComponent();
             setArrButton();

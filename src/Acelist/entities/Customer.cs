@@ -228,5 +228,23 @@ namespace Acelist.entities
             connection.Close();
             initialize();
         }
+
+        public string getNameFromId(string id)
+        {
+            int i = 0;
+            bool found = false;
+            while (found == false && i < customer_id.Count)
+            {
+                if (id == customer_id[i])
+                {
+                    found = true;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+            return customer_name[i];
+        }
     }
 }
