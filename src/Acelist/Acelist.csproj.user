@@ -25,9 +25,6 @@
     <Compile Update="boundary\popupform\EditCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="boundary\popupform\NewBookForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="boundary\popupform\NewCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
