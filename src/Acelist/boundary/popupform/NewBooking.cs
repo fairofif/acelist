@@ -14,15 +14,16 @@ namespace Acelist.boundary.popupform
     public partial class NewBooking : Form
     {
         private Form choosenRoomUI;
-        private Form availabilityUI;
+        private RoomAvailabilityUI availabilityUI;
         private Panel mainMenuPanel;
         private Button roomMapButton;
+        private Receptionist receptionist = new Receptionist();
         private DateTime dtPicked;
 
         Booking booking = new Booking();
         
         private Customer customer = new Customer();
-        public NewBooking(Form choosenRoomUI, Button roomMapButton, Panel mainMenuPanel, Form AvailabilityUI, DateTime dtPicked)
+        public NewBooking(Form choosenRoomUI, Button roomMapButton, Panel mainMenuPanel, RoomAvailabilityUI AvailabilityUI, DateTime dtPicked)
         {
             InitializeComponent();
             this.choosenRoomUI = choosenRoomUI;
@@ -105,7 +106,7 @@ namespace Acelist.boundary.popupform
                 else
                 {
                     roomMapButton.BackColor = Color.FromArgb(153, 144, 11);
-                    booking.addBooking(textBoxIdCust.Text, "55443322110002", roomMapButton.Text, DateTime.Now, dtPicked, dateTimePicker1.Value.Date);
+                    booking.addBooking(textBoxIdCust.Text, receptionist.getArrEmployeeId()[availabilityUI.idxUsernameUsed], roomMapButton.Text, DateTime.Now, dtPicked, dateTimePicker1.Value.Date);
                     MessageBox.Show("Book Added");
                     callChoosenRoomUI(new ChoosenRoomUI(roomMapButton, mainMenuPanel, availabilityUI, booking.getArrBookingID()[booking.getArrBookingID().Count-1], dtPicked), sender);
                     this.Close();

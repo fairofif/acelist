@@ -232,6 +232,24 @@ namespace Acelist.entities
             return i;
         }
 
+        public string getNameFromId(string id)
+        {
+            int i = 0;
+            bool found = false;
+            while (found == false && i < employee_id.Count)
+            {
+                if (id == employee_id[i])
+                {
+                    found = true;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+            return name[i];
+        }
+
         public bool checkLogin(string uname, string pw)
         {
             int idx = idxUsername(uname); 
