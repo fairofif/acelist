@@ -106,7 +106,7 @@ namespace Acelist.boundary
 
         private void NavbarButtonBookHistory_Click(object sender, EventArgs e)
         {
-            callUIToPanelMainMenu(new BookHistoryUI(this.panelMainMenu), sender);
+            callUIToPanelMainMenu(new BookHistoryUI(), sender);
         }
 
         private void NavbarButtonRooms_Click(object sender, EventArgs e)

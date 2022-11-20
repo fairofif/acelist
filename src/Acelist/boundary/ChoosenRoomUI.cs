@@ -39,7 +39,6 @@ namespace Acelist.boundary
         private void initialize(Button roomMapButton)
         {
             this.statusRoom.Enabled = false;
-            this.dataGridView1.Columns[4].Visible = true;
             if (roomMapButton.BackColor == Color.FromArgb(21, 87, 36)) // ijo
             {
                 this.dataGridView1.Rows.Clear();
@@ -112,7 +111,6 @@ namespace Acelist.boundary
                         this.buttonAddService.Enabled = false;
                         this.statusRoom.BackColor = Color.White;
                         this.buttonCheckedIn.Enabled = false;
-                        this.dataGridView1.Columns[4].Visible = false;
                     }
                     
                 }
