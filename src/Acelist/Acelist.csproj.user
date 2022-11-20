@@ -22,13 +22,19 @@
     <Compile Update="boundary\MainMenuUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="boundary\popupform\EditCustomerForm.cs">
+    <Compile Update="boundary\popupform\AddOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="boundary\popupform\NewCustomerForm.cs">
+    <Compile Update="boundary\popupform\HistoryDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="boundary\popupform\RegisterForm.cs">
+    <Compile Update="boundary\popupform\NewBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="boundary\popupform\NewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="boundary\popupform\Register.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="boundary\RoomAvailabilityUI.cs">

@@ -11,9 +11,6 @@ C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Ac
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.LevelFloorMapUI.resources
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.LoginUI.resources
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.MainMenuUI.resources
-C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.popupform.EditCustomerForm.resources
-C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.popupform.NewCustomerForm.resources
-C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.popupform.RegisterForm.resources
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.RoomAvailabilityUI.resources
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.RoomSpecificationUI.resources
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.Properties.Resources.resources
@@ -37,3 +34,6 @@ C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\Release\net6.0-windows\Bo
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.csproj.CopyComplete
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.popupform.AddOrder.resources
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.popupform.NewBooking.resources
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.popupform.HistoryDetails.resources
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.popupform.NewCustomer.resources
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.popupform.Register.resources
