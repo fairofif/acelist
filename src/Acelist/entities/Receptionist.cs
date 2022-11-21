@@ -273,5 +273,15 @@ namespace Acelist.entities
             initialize();
         }
 
+        public void updatePassword(int idx, string newPass)
+        {
+            string query = "update receptionist set password = '"+ newPass+ "' where employee_id = '"+ employee_id[idx]+"'";
+            connection.Open();
+            MySqlCommand myCommand = new MySqlCommand(query, this.connection);
+            myCommand.ExecuteNonQuery();
+            connection.Close();
+            initialize();
+        }
+
     }
 }

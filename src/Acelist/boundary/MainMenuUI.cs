@@ -121,7 +121,7 @@ namespace Acelist.boundary
 
         private void NavbarButtonAccount_Click(object sender, EventArgs e)
         {
-            callUIToPanelMainMenu(new AccountUI(), sender);
+            callUIToPanelMainMenu(new AccountUI(idxUsernameUsed, this), sender);  
         }
     }
 }
