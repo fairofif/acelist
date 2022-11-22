@@ -54,16 +54,16 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(415, 195);
+            this.panel1.Size = new System.Drawing.Size(382, 195);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(168, 149);
+            this.label1.Location = new System.Drawing.Point(152, 149);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 25);
             this.label1.TabIndex = 1;
@@ -74,7 +74,7 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(132, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(116, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 122);
             this.pictureBox1.TabIndex = 0;
@@ -87,7 +87,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 195);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(415, 422);
+            this.panel2.Size = new System.Drawing.Size(382, 422);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView1
@@ -111,7 +111,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(366, 391);
+            this.dataGridView1.Size = new System.Drawing.Size(333, 391);
             this.dataGridView1.TabIndex = 0;
             // 
             // ColumnUnit
@@ -154,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 617);
+            this.ClientSize = new System.Drawing.Size(382, 617);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "PrintBills";
