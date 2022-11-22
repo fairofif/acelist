@@ -21,6 +21,6 @@ build_job:
 test_job:
   stage: test
   script:
-    - '& "$env:VSTEST_PATH" "$env:UNITTEST_FOLDER\AcelistTest.dll"'
+    - '& "$env:VSTEST_PATH" "$env:UNITTEST_FOLDER\AcelistUnitTest.dll"'
   dependencies:
     - build_job
