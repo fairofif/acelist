@@ -18,6 +18,8 @@ build_job:
     expire_in: 2 days
     paths:
       - '.\src\Acelist\bin\Release\'
+      - '$env:TEST_FOLDER'
+      - '.\$env:MSTEST_PATH\*.*'
   allow_failure:
     exit_codes: 2
 
@@ -26,8 +28,6 @@ test_job:
   tags:
     - testss
   script:
-    '& "$env:MSTEST_PATH" ".\src\AcelistUnitTest\UnitTest1.cs'
-  artifacts:
-    expire_in: 2 days
-    paths:
-      - '.\src\AcelistUnitTest\bin\Release\'
+    - .\src\AcelistUnitTest\AcelistUnitTest.bat
+  dependencies:
+    - "build_job"
