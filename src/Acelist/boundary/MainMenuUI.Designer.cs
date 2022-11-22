@@ -77,7 +77,7 @@
             this.panelNavbar.Location = new System.Drawing.Point(0, 0);
             this.panelNavbar.Margin = new System.Windows.Forms.Padding(2);
             this.panelNavbar.Name = "panelNavbar";
-            this.panelNavbar.Size = new System.Drawing.Size(165, 579);
+            this.panelNavbar.Size = new System.Drawing.Size(206, 724);
             this.panelNavbar.TabIndex = 1;
             // 
             // NavbarButtonAccount
@@ -88,11 +88,11 @@
             this.NavbarButtonAccount.ForeColor = System.Drawing.SystemColors.Control;
             this.NavbarButtonAccount.Image = ((System.Drawing.Image)(resources.GetObject("NavbarButtonAccount.Image")));
             this.NavbarButtonAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NavbarButtonAccount.Location = new System.Drawing.Point(0, 309);
+            this.NavbarButtonAccount.Location = new System.Drawing.Point(0, 384);
             this.NavbarButtonAccount.Margin = new System.Windows.Forms.Padding(2);
             this.NavbarButtonAccount.Name = "NavbarButtonAccount";
-            this.NavbarButtonAccount.Padding = new System.Windows.Forms.Padding(16, 0, 4, 0);
-            this.NavbarButtonAccount.Size = new System.Drawing.Size(165, 58);
+            this.NavbarButtonAccount.Padding = new System.Windows.Forms.Padding(20, 0, 5, 0);
+            this.NavbarButtonAccount.Size = new System.Drawing.Size(206, 72);
             this.NavbarButtonAccount.TabIndex = 5;
             this.NavbarButtonAccount.Text = "Account";
             this.NavbarButtonAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,11 +108,11 @@
             this.NavbarButtonCustomer.ForeColor = System.Drawing.SystemColors.Control;
             this.NavbarButtonCustomer.Image = ((System.Drawing.Image)(resources.GetObject("NavbarButtonCustomer.Image")));
             this.NavbarButtonCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NavbarButtonCustomer.Location = new System.Drawing.Point(0, 251);
+            this.NavbarButtonCustomer.Location = new System.Drawing.Point(0, 312);
             this.NavbarButtonCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.NavbarButtonCustomer.Name = "NavbarButtonCustomer";
-            this.NavbarButtonCustomer.Padding = new System.Windows.Forms.Padding(16, 0, 4, 0);
-            this.NavbarButtonCustomer.Size = new System.Drawing.Size(165, 58);
+            this.NavbarButtonCustomer.Padding = new System.Windows.Forms.Padding(20, 0, 5, 0);
+            this.NavbarButtonCustomer.Size = new System.Drawing.Size(206, 72);
             this.NavbarButtonCustomer.TabIndex = 4;
             this.NavbarButtonCustomer.Text = "Customer";
             this.NavbarButtonCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -127,11 +127,11 @@
             this.NavbarButtonRooms.ForeColor = System.Drawing.SystemColors.Control;
             this.NavbarButtonRooms.Image = ((System.Drawing.Image)(resources.GetObject("NavbarButtonRooms.Image")));
             this.NavbarButtonRooms.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NavbarButtonRooms.Location = new System.Drawing.Point(0, 193);
+            this.NavbarButtonRooms.Location = new System.Drawing.Point(0, 240);
             this.NavbarButtonRooms.Margin = new System.Windows.Forms.Padding(2);
             this.NavbarButtonRooms.Name = "NavbarButtonRooms";
-            this.NavbarButtonRooms.Padding = new System.Windows.Forms.Padding(16, 0, 4, 0);
-            this.NavbarButtonRooms.Size = new System.Drawing.Size(165, 58);
+            this.NavbarButtonRooms.Padding = new System.Windows.Forms.Padding(20, 0, 5, 0);
+            this.NavbarButtonRooms.Size = new System.Drawing.Size(206, 72);
             this.NavbarButtonRooms.TabIndex = 3;
             this.NavbarButtonRooms.Text = "Rooms";
             this.NavbarButtonRooms.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -146,11 +146,11 @@
             this.NavbarButtonBookHistory.ForeColor = System.Drawing.SystemColors.Control;
             this.NavbarButtonBookHistory.Image = ((System.Drawing.Image)(resources.GetObject("NavbarButtonBookHistory.Image")));
             this.NavbarButtonBookHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NavbarButtonBookHistory.Location = new System.Drawing.Point(0, 135);
+            this.NavbarButtonBookHistory.Location = new System.Drawing.Point(0, 168);
             this.NavbarButtonBookHistory.Margin = new System.Windows.Forms.Padding(2);
             this.NavbarButtonBookHistory.Name = "NavbarButtonBookHistory";
-            this.NavbarButtonBookHistory.Padding = new System.Windows.Forms.Padding(16, 0, 4, 0);
-            this.NavbarButtonBookHistory.Size = new System.Drawing.Size(165, 58);
+            this.NavbarButtonBookHistory.Padding = new System.Windows.Forms.Padding(20, 0, 5, 0);
+            this.NavbarButtonBookHistory.Size = new System.Drawing.Size(206, 72);
             this.NavbarButtonBookHistory.TabIndex = 2;
             this.NavbarButtonBookHistory.Text = "Book History";
             this.NavbarButtonBookHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -166,11 +166,11 @@
             this.NavbarButtonAvailability.ForeColor = System.Drawing.SystemColors.Control;
             this.NavbarButtonAvailability.Image = ((System.Drawing.Image)(resources.GetObject("NavbarButtonAvailability.Image")));
             this.NavbarButtonAvailability.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NavbarButtonAvailability.Location = new System.Drawing.Point(0, 77);
+            this.NavbarButtonAvailability.Location = new System.Drawing.Point(0, 96);
             this.NavbarButtonAvailability.Margin = new System.Windows.Forms.Padding(2);
             this.NavbarButtonAvailability.Name = "NavbarButtonAvailability";
-            this.NavbarButtonAvailability.Padding = new System.Windows.Forms.Padding(16, 0, 4, 0);
-            this.NavbarButtonAvailability.Size = new System.Drawing.Size(165, 58);
+            this.NavbarButtonAvailability.Padding = new System.Windows.Forms.Padding(20, 0, 5, 0);
+            this.NavbarButtonAvailability.Size = new System.Drawing.Size(206, 72);
             this.NavbarButtonAvailability.TabIndex = 1;
             this.NavbarButtonAvailability.Text = "Availability";
             this.NavbarButtonAvailability.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -186,7 +186,7 @@
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(165, 77);
+            this.panelLogo.Size = new System.Drawing.Size(206, 96);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -194,9 +194,10 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(22, 8);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 62);
+            this.pictureBox1.Size = new System.Drawing.Size(156, 78);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -205,10 +206,10 @@
             this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(69)))));
             this.panelBar.Controls.Add(this.textTitle);
             this.panelBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBar.Location = new System.Drawing.Point(165, 0);
+            this.panelBar.Location = new System.Drawing.Point(206, 0);
             this.panelBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(606, 77);
+            this.panelBar.Size = new System.Drawing.Size(979, 96);
             this.panelBar.TabIndex = 2;
             // 
             // textTitle
@@ -216,10 +217,10 @@
             this.textTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textTitle.ForeColor = System.Drawing.SystemColors.Control;
-            this.textTitle.Location = new System.Drawing.Point(113, 22);
+            this.textTitle.Location = new System.Drawing.Point(251, 28);
             this.textTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.textTitle.Name = "textTitle";
-            this.textTitle.Size = new System.Drawing.Size(363, 30);
+            this.textTitle.Size = new System.Drawing.Size(454, 38);
             this.textTitle.TabIndex = 3;
             this.textTitle.Text = "Acelist Hotel Management";
             this.textTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -228,10 +229,10 @@
             // 
             this.panelMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
             this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMainMenu.Location = new System.Drawing.Point(165, 77);
+            this.panelMainMenu.Location = new System.Drawing.Point(206, 96);
             this.panelMainMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMainMenu.Name = "panelMainMenu";
-            this.panelMainMenu.Size = new System.Drawing.Size(606, 502);
+            this.panelMainMenu.Size = new System.Drawing.Size(979, 628);
             this.panelMainMenu.TabIndex = 3;
             // 
             // tableLayoutPanel40
@@ -273,7 +274,7 @@
             this.harga2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.harga2.Location = new System.Drawing.Point(0, 1);
             this.harga2.Name = "harga2";
-            this.harga2.Size = new System.Drawing.Size(89, 20);
+            this.harga2.Size = new System.Drawing.Size(109, 25);
             this.harga2.TabIndex = 7;
             this.harga2.Text = "Rp1.200.000";
             // 
@@ -316,7 +317,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(0, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 20);
+            this.label1.Size = new System.Drawing.Size(109, 25);
             this.label1.TabIndex = 7;
             this.label1.Text = "Rp1.200.000";
             // 
@@ -359,15 +360,15 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(0, 1);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 20);
+            this.label2.Size = new System.Drawing.Size(109, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "Rp1.200.000";
             // 
             // MainMenuUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 579);
+            this.ClientSize = new System.Drawing.Size(1185, 724);
             this.Controls.Add(this.panelMainMenu);
             this.Controls.Add(this.panelBar);
             this.Controls.Add(this.panelNavbar);

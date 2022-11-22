@@ -38,6 +38,7 @@ namespace Acelist.boundary
         }
         private void initialize(Button roomMapButton)
         {
+            this.labelPerNight.Text = room.getPriceByRoomId(Int32.Parse(roomMapButton.Text)).ToString() + "/night";
             this.statusRoom.Enabled = false;
             this.dataGridView1.Columns[4].Visible = true;
             if (roomMapButton.BackColor == Color.FromArgb(21, 87, 36)) // ijo
@@ -69,7 +70,7 @@ namespace Acelist.boundary
                 this.buttonCheckedOut.Enabled = false;
                 this.buttonCheckedIn.Text = "Checkin";
                 this.buttonNewBook.Text = "Delete Book";
-                this.buttonNewBook.BackColor = Color.FromArgb(97, 6, 26);
+                this.buttonNewBook.BackColor = Color.FromArgb(254, 231, 92);
                 this.buttonNewBook.Enabled = true;
                 this.buttonAddService.Enabled = false;
                 this.buttonBills.Enabled = false;
@@ -121,6 +122,7 @@ namespace Acelist.boundary
 
         private int totalBills()
         {
+            DateNightBook dnb = new DateNightBook(booking.getArrBookingID(), booking.getArrRoomID(), booking.getArrCheckinTime(), booking.getArrCheckoutTime());
             int total = 0;
             for (int i = 0; i < orders.getArrIdx().Count; i++)
             {
@@ -129,7 +131,7 @@ namespace Acelist.boundary
                     total += (menus.getPriceFromItemId(orders.getArrItemId()[i]) * orders.getArrAmount()[i]);
                 }
             }
-            return (total + room.getPriceByRoomId(booking.getRoomIdByBookId(bookid)));
+            return (total + (dnb.countNightById(bookid) * room.getPriceByRoomId(booking.getRoomIdByBookId(bookid))));
         }
         private void addRowsToTable()
         {
@@ -242,6 +244,12 @@ namespace Acelist.boundary
                 initialize(roomMapButton);
 
             }
+        }
+
+        private void buttonBills_Click(object sender, EventArgs e)
+        {
+            PrintBills billui = new PrintBills(bookid);
+            billui.ShowDialog();
         }
     }
 }
