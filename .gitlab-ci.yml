@@ -1,7 +1,7 @@
 variables:
   NUGET_PATH: 'C:\NuGet\nuget.exe'
   MSBUILD_PATH: 'C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\msbuild.exe'
-  MSTEST_PATH: 'C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\MSTest.exe'
+  MSTEST_PATH: 'C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\mstest.exe'
   UNITTEST_FOLDER: '.\src\AcelistUnitTest\bin\Release\net6.0-windows'
 
 stages:
@@ -17,7 +17,6 @@ build_job:
     expire_in: 2 days
     paths:
       - '$env:UNITTEST_FOLDER'
-      - '.\$env:MSTEST_PATH\*.*'
 
 test_job:
   stage: test
