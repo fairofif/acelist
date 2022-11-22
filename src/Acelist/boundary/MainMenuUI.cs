@@ -53,7 +53,7 @@ namespace Acelist.boundary
                     currentNavbar = (Button)sender;
                     currentNavbar.BackColor = color;
                     currentNavbar.ForeColor = Color.White;
-                    currentNavbar.Font = new System.Drawing.Font("Segoe UI", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+                    currentNavbar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
                     panelBar.BackColor = color;
                     panelMainMenu.BackColor = color;
                     NavbarButtonAccount.BackColor = color;
@@ -122,6 +122,11 @@ namespace Acelist.boundary
         private void NavbarButtonAccount_Click(object sender, EventArgs e)
         {
             callUIToPanelMainMenu(new AccountUI(idxUsernameUsed, this), sender);  
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

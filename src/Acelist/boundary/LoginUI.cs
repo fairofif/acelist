@@ -36,11 +36,13 @@ namespace Acelist.boundary
             {
                 this.labelRegister.Enabled = false;
                 this.labelRegister.Hide();
+                this.labelBelumPunyaAkun.Hide();
             }
             else
             {
                 this.labelRegister.Enabled = true;
                 this.labelRegister.Show();
+                this.labelBelumPunyaAkun.Show();
             }
         }
 
