@@ -31,6 +31,7 @@ namespace Acelist.boundary.popupform
             dnb = new DateNightBook(booking.getArrBookingID(), booking.getArrRoomID(), booking.getArrCheckinTime(), booking.getArrCheckoutTime());
             setArrList();
             printToTable();
+            this.label1.Text = "Book #" + bookid;
         }
 
         private void printToTable()
