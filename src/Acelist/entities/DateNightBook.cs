@@ -48,7 +48,18 @@ namespace Acelist.entities
             return this.room_id;
         }
 
-
+        public int countNightById(int id)
+        {
+            int count = 0;
+            for (int i = 0; i<booking_id.Count; i++)
+            {
+                if (booking_id[i] == id)
+                {
+                    count += 1;
+                }
+            }
+            return count;
+        }
 
     }
 }

@@ -159,5 +159,23 @@ namespace Acelist.entities
             }
             return room_price[i];
         }
+
+        public string getTypeByRoomId(int roomid)
+        {
+            int i = 0;
+            bool found = false;
+            while (found == false && i < room_id.Count)
+            {
+                if (room_id[i] == roomid)
+                {
+                    found = true;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+            return room_type[i];
+        }
     }
 }

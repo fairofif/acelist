@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChoosenRoomUI));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelPerNight = new System.Windows.Forms.Label();
             this.statusRoom = new System.Windows.Forms.Button();
             this.buttonCheckedOut = new System.Windows.Forms.Button();
             this.buttonCheckedIn = new System.Windows.Forms.Button();
@@ -62,6 +64,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
+            this.panel1.Controls.Add(this.labelPerNight);
             this.panel1.Controls.Add(this.statusRoom);
             this.panel1.Controls.Add(this.buttonCheckedOut);
             this.panel1.Controls.Add(this.buttonCheckedIn);
@@ -80,15 +83,27 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1117, 227);
+            this.panel1.Size = new System.Drawing.Size(1111, 227);
             this.panel1.TabIndex = 0;
+            // 
+            // labelPerNight
+            // 
+            this.labelPerNight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPerNight.AutoSize = true;
+            this.labelPerNight.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelPerNight.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelPerNight.Location = new System.Drawing.Point(791, 62);
+            this.labelPerNight.Name = "labelPerNight";
+            this.labelPerNight.Size = new System.Drawing.Size(121, 21);
+            this.labelPerNight.TabIndex = 17;
+            this.labelPerNight.Text = "1000000/night";
             // 
             // statusRoom
             // 
             this.statusRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.statusRoom.FlatAppearance.BorderSize = 0;
             this.statusRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.statusRoom.Location = new System.Drawing.Point(904, 24);
+            this.statusRoom.Location = new System.Drawing.Point(898, 24);
             this.statusRoom.Name = "statusRoom";
             this.statusRoom.Size = new System.Drawing.Size(29, 17);
             this.statusRoom.TabIndex = 16;
@@ -97,11 +112,12 @@
             // buttonCheckedOut
             // 
             this.buttonCheckedOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCheckedOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(87)))), ((int)(((byte)(36)))));
+            this.buttonCheckedOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
             this.buttonCheckedOut.FlatAppearance.BorderSize = 0;
             this.buttonCheckedOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCheckedOut.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCheckedOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonCheckedOut.Location = new System.Drawing.Point(813, 125);
+            this.buttonCheckedOut.Location = new System.Drawing.Point(807, 125);
             this.buttonCheckedOut.Name = "buttonCheckedOut";
             this.buttonCheckedOut.Size = new System.Drawing.Size(129, 34);
             this.buttonCheckedOut.TabIndex = 15;
@@ -112,11 +128,12 @@
             // buttonCheckedIn
             // 
             this.buttonCheckedIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCheckedIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(87)))), ((int)(((byte)(36)))));
+            this.buttonCheckedIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
             this.buttonCheckedIn.FlatAppearance.BorderSize = 0;
             this.buttonCheckedIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCheckedIn.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCheckedIn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonCheckedIn.Location = new System.Drawing.Point(667, 125);
+            this.buttonCheckedIn.Location = new System.Drawing.Point(661, 125);
             this.buttonCheckedIn.Name = "buttonCheckedIn";
             this.buttonCheckedIn.Size = new System.Drawing.Size(129, 34);
             this.buttonCheckedIn.TabIndex = 14;
@@ -127,11 +144,12 @@
             // buttonRefresh
             // 
             this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(87)))), ((int)(((byte)(36)))));
+            this.buttonRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
             this.buttonRefresh.FlatAppearance.BorderSize = 0;
             this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonRefresh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonRefresh.Location = new System.Drawing.Point(960, 125);
+            this.buttonRefresh.Location = new System.Drawing.Point(954, 125);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(129, 34);
             this.buttonRefresh.TabIndex = 13;
@@ -197,35 +215,41 @@
             // buttonBills
             // 
             this.buttonBills.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(87)))), ((int)(((byte)(36)))));
+            this.buttonBills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
             this.buttonBills.FlatAppearance.BorderSize = 0;
             this.buttonBills.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBills.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonBills.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonBills.Location = new System.Drawing.Point(667, 175);
+            this.buttonBills.Location = new System.Drawing.Point(661, 175);
             this.buttonBills.Name = "buttonBills";
             this.buttonBills.Size = new System.Drawing.Size(129, 34);
             this.buttonBills.TabIndex = 5;
             this.buttonBills.Text = "Print Bills";
             this.buttonBills.UseVisualStyleBackColor = false;
+            this.buttonBills.Click += new System.EventHandler(this.buttonBills_Click);
             // 
             // buttonBack
             // 
+            this.buttonBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBack.BackgroundImage")));
+            this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonBack.FlatAppearance.BorderSize = 0;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Location = new System.Drawing.Point(28, 12);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(40, 38);
+            this.buttonBack.Size = new System.Drawing.Size(40, 40);
             this.buttonBack.TabIndex = 4;
-            this.buttonBack.Text = "<";
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // buttonNewBook
             // 
             this.buttonNewBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonNewBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(87)))), ((int)(((byte)(36)))));
+            this.buttonNewBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(242)))), ((int)(((byte)(135)))));
             this.buttonNewBook.FlatAppearance.BorderSize = 0;
             this.buttonNewBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNewBook.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonNewBook.Location = new System.Drawing.Point(960, 175);
+            this.buttonNewBook.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonNewBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonNewBook.Location = new System.Drawing.Point(954, 175);
             this.buttonNewBook.Name = "buttonNewBook";
             this.buttonNewBook.Size = new System.Drawing.Size(129, 34);
             this.buttonNewBook.TabIndex = 3;
@@ -236,11 +260,12 @@
             // buttonAddService
             // 
             this.buttonAddService.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(87)))), ((int)(((byte)(36)))));
+            this.buttonAddService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
             this.buttonAddService.FlatAppearance.BorderSize = 0;
             this.buttonAddService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddService.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonAddService.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonAddService.Location = new System.Drawing.Point(813, 175);
+            this.buttonAddService.Location = new System.Drawing.Point(807, 175);
             this.buttonAddService.Name = "buttonAddService";
             this.buttonAddService.Size = new System.Drawing.Size(129, 34);
             this.buttonAddService.TabIndex = 2;
@@ -254,7 +279,7 @@
             this.labelRoom.AutoSize = true;
             this.labelRoom.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelRoom.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelRoom.Location = new System.Drawing.Point(928, 50);
+            this.labelRoom.Location = new System.Drawing.Point(922, 50);
             this.labelRoom.Name = "labelRoom";
             this.labelRoom.Size = new System.Drawing.Size(177, 41);
             this.labelRoom.TabIndex = 1;
@@ -266,7 +291,7 @@
             this.labelBook.AutoSize = true;
             this.labelBook.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelBook.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelBook.Location = new System.Drawing.Point(938, 9);
+            this.labelBook.Location = new System.Drawing.Point(932, 9);
             this.labelBook.Name = "labelBook";
             this.labelBook.Size = new System.Drawing.Size(167, 41);
             this.labelBook.TabIndex = 0;
@@ -279,7 +304,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 227);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1117, 409);
+            this.panel2.Size = new System.Drawing.Size(1111, 409);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView1
@@ -318,7 +343,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1061, 362);
+            this.dataGridView1.Size = new System.Drawing.Size(1055, 362);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -367,7 +392,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1117, 636);
+            this.ClientSize = new System.Drawing.Size(1111, 636);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ChoosenRoomUI";
@@ -405,5 +430,6 @@
         private DataGridViewTextBoxColumn ColumnAmount;
         private DataGridViewTextBoxColumn ColumnPrice;
         private DataGridViewButtonColumn Delete;
+        private Label labelPerNight;
     }
 }
