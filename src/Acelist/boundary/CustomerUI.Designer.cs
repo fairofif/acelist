@@ -59,9 +59,9 @@
             this.panel1.Controls.Add(this.buttonAddCustomer);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(758, 83);
+            this.panel1.Size = new System.Drawing.Size(948, 104);
             this.panel1.TabIndex = 0;
             // 
             // buttonSearch
@@ -71,10 +71,10 @@
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonSearch.Location = new System.Drawing.Point(208, 20);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSearch.Location = new System.Drawing.Point(260, 25);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(69, 40);
+            this.buttonSearch.Size = new System.Drawing.Size(86, 50);
             this.buttonSearch.TabIndex = 3;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = false;
@@ -85,10 +85,10 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox1.Location = new System.Drawing.Point(24, 28);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(30, 35);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(172, 27);
+            this.textBox1.Size = new System.Drawing.Size(214, 31);
             this.textBox1.TabIndex = 2;
             // 
             // buttonAddCustomer
@@ -99,10 +99,10 @@
             this.buttonAddCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddCustomer.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonAddCustomer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonAddCustomer.Location = new System.Drawing.Point(597, 15);
-            this.buttonAddCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAddCustomer.Location = new System.Drawing.Point(746, 19);
+            this.buttonAddCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAddCustomer.Name = "buttonAddCustomer";
-            this.buttonAddCustomer.Size = new System.Drawing.Size(136, 40);
+            this.buttonAddCustomer.Size = new System.Drawing.Size(170, 50);
             this.buttonAddCustomer.TabIndex = 0;
             this.buttonAddCustomer.Text = "Add Customer";
             this.buttonAddCustomer.UseVisualStyleBackColor = false;
@@ -113,10 +113,10 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 83);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 104);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(758, 345);
+            this.panel2.Size = new System.Drawing.Size(948, 431);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView1
@@ -130,7 +130,7 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(78)))), ((int)(((byte)(237)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -144,9 +144,9 @@
             this.ColumnButtonEdit,
             this.ColumnButtonDelete});
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 14);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.Location = new System.Drawing.Point(30, 18);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -161,8 +161,8 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(709, 313);
+            this.dataGridView1.RowTemplate.Height = 52;
+            this.dataGridView1.Size = new System.Drawing.Size(886, 391);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -228,12 +228,12 @@
             // 
             // CustomerUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 428);
+            this.ClientSize = new System.Drawing.Size(948, 535);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CustomerUI";
             this.Text = "Customer";
             this.panel1.ResumeLayout(false);
