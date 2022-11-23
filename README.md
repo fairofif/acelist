@@ -65,3 +65,14 @@ How To Run:
     Please contact developers (Rofif Fairuz Hawary, line: rofiffairuzhawary) to register the public internet IP
 4. Double Click "setup.exe" and follow the installing instruction
 5. Double Click "Acelist.exe"
+6. Here are some receptionist user id pass: 
+    1
+
+    username: nasikorea
+
+    password: nasikorea
+
+    2
+
+    username: nasijepang
+    password: nasijepang
