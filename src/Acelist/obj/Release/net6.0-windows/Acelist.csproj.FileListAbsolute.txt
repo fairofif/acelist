@@ -37,3 +37,9 @@ C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Ac
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.popupform.HistoryDetails.resources
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.popupform.NewCustomer.resources
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.popupform.Register.resources
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.popupform.ChangePassword.resources
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.boundary.popupform.PrintBills.resources
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\Release\net6.0-windows\Acelist.dll.manifest
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\Release\net6.0-windows\Acelist.application
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.dll.manifest
+C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\obj\Release\net6.0-windows\Acelist.application

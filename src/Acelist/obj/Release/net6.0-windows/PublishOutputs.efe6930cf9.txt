@@ -10,9 +10,3 @@ C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\publish\K4os.Hash.xxHash.
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\publish\MySql.Data.dll
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\publish\ZstdNet.dll
 C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\publish\BouncyCastle.Crypto.dll
-C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\publish\System.Data.SqlClient.dll
-C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\publish\runtimes\win-arm64\native\sni.dll
-C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\publish\runtimes\win-x64\native\sni.dll
-C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\publish\runtimes\win-x86\native\sni.dll
-C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\publish\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\rofif\Dokumen\ITB\RPL\acelist\src\Acelist\bin\publish\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
