@@ -71,5 +71,16 @@ namespace Acelist.boundary.popupform
                 }
             }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelLogin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            loginform.Show();
+        }
     }
 }

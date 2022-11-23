@@ -52,5 +52,15 @@ namespace Acelist.boundary
             changeUI.ShowDialog();
             receptionist.initialize();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ValueID_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
