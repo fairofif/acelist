@@ -5,87 +5,34 @@ using Acelist.entities;
 namespace AcelistUnitTest
 {
     [TestClass]
-    public class UnitTestReceptionist
+    public class UnitTestOrders
     {
-        Receptionist receptionist = new Receptionist();
+        Order orders = new Order();
         [TestMethod]
-        public void TestMethodIdExistTrue()
+        public void TestIsIDHasOrderTrue()
         {
-            bool status = false;
-            if (receptionist.isIdExist("55443322110001")) { status = true; }
-            Assert.AreEqual(true, status);
-        }
-
-        [TestMethod]
-        public void TestMethodIdExistFalse()
-        {
-            bool status = false;
-            if (receptionist.isIdExist("5544332211")) { status = true; }
-            Assert.AreEqual(false, status);
-        }
-
-        [TestMethod]
-        public void ReturnNameFromIDButTrue()
-        {
-            bool status = false;
-            if (receptionist.getNameFromId("55443322110002") == "Monkey D. Luffy")
-            {
-                status = true;
-            }
-            Assert.AreEqual(true, status);
-        }
-
-        [TestMethod]
-        public void ReturnNameFromIDButFalse()
-        {
-            bool status = false;
-            if (receptionist.getNameFromId(receptionist.getArrEmployeeId()[2]) == "Monkey D. Luffy")
-            {
-                status = true;
-            }
-            Assert.AreEqual(false, status);
-        }
-    }
-
-    [TestClass]
-    public class UnitTestRoom
-    {
-        Room room = new Room();
-        [TestMethod]
-        public void checkNumberOfRoom()
-        {
-            Assert.AreEqual(120, room.getArrRoomId().Count);
-        }
-
-    }
-
-    [TestClass]
-    public class UnitTestCustomer
-    {
-        Customer customer = new Customer();
-        [TestMethod]
-        public void TestCustomerIDIsExistTrue()
-        {
-            Assert.AreEqual(true, customer.isIdExist("1122334455007"));
+            Assert.AreEqual(true, orders.isHasOrder(1));
         }
         [TestMethod]
-        public void TestCustomerIDIsExistFalse()
+        public void TestIsIDHasOrderFalse()
         {
-            Assert.AreEqual(false, customer.isIdExist("1234"));
+            Assert.AreEqual(false, orders.isHasOrder(8));
         }
-
         [TestMethod]
-        public void TestAddCustomer()
+        public void TestAddOrder()
         {
-            customer.addCustomer("123", "unittest", "unittest", "111-111-1111");
-            Assert.AreEqual(true, customer.isIdExist("123"));
+            int lenArrayBefore = orders.getArrIdx().Count;
+            orders.addOrder(1, 1, 1);
+            int lenArrayAfter = orders.getArrIdx().Count;
+            Assert.AreEqual(lenArrayBefore + 1, lenArrayAfter);
         }
-
         [TestMethod]
-        public void TestDeleteCustomer()
+        public void TestDeleteOrder()
         {
-            customer.deleteCust("123");
-            Assert.AreEqual(false, customer.isIdExist("123"));
+            int lenArrayBefore = orders.getArrIdx().Count;
+            orders.deleteOrder(orders.getArrIdx()[(orders.getArrIdx().Count)-1]);
+            int lenArrayAfter = orders.getArrIdx().Count;
+            Assert.AreEqual(lenArrayBefore - 1, lenArrayAfter);
         }
     }
 }
