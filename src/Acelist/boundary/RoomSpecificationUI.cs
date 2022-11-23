@@ -28,12 +28,13 @@ namespace Acelist.boundary
             this.bathub5.Hide();
             this.bathub6.Hide();
 
-            pictureBox1.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\M1.png"));
-            pictureBox2.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\M2.png"));
-            pictureBox3.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\M3.png"));
-            pictureBox4.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\M4.png"));
-            pictureBox5.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\M5.png"));
-            pictureBox6.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\M6.png"));
+            pictureBox1.BackgroundImage = (Image)(Properties.Resources.M1);
+            pictureBox2.BackgroundImage = (Image)(Properties.Resources.M2);
+            pictureBox3.BackgroundImage = (Image)(Properties.Resources.M3);
+            pictureBox4.BackgroundImage = (Image)(Properties.Resources.M4);
+            pictureBox5.BackgroundImage = (Image)(Properties.Resources.M5);
+            pictureBox6.BackgroundImage = (Image)(Properties.Resources.M6);
+
 
             nameroom1.Text = "Room 101 - 105";
             nameroom2.Text = "Room 106 - 110";
@@ -43,19 +44,18 @@ namespace Acelist.boundary
             nameroom6.Text = "Room 126 - 130";
 
             harga1.Text = "Rp650.000";
-            harga2.Text = "Rp700.000";
+            harga2.Text = "Rp670.000";
             harga3.Text = "Rp700.000";
-            harga4.Text = "Rp650.000";
-            harga5.Text = "Rp650.000";
-            harga6.Text = "Rp750.000";
+            harga4.Text = "Rp725.000";
+            harga5.Text = "Rp740.000";
+            harga6.Text = "Rp760.000";
 
             luas1.Text = "10x7 m²";
             luas2.Text = "9x8 m²";
             luas3.Text = "10x8 m²";
-            luas3.Text = "10x9 m²";
-            luas3.Text = "10x10 m²";
-            luas3.Text = "9x11 m²";
-            luas3.Text = "10x11 m²";
+            luas4.Text = "10x9 m²";
+            luas5.Text = "10x10 m²";
+            luas6.Text = "9x11 m²";
 
         }
 
@@ -231,12 +231,13 @@ namespace Acelist.boundary
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            pictureBox1.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\M1.png"));
-            pictureBox2.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\M2.png"));
-            pictureBox3.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\M3.png"));
-            pictureBox4.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\M4.png"));
-            pictureBox5.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\M5.png"));
-            pictureBox6.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\M6.png"));
+            pictureBox1.BackgroundImage = (Image)(Properties.Resources.M1);
+            pictureBox2.BackgroundImage = (Image)(Properties.Resources.M2);
+            pictureBox3.BackgroundImage = (Image)(Properties.Resources.M3);
+            pictureBox4.BackgroundImage = (Image)(Properties.Resources.M4);
+            pictureBox5.BackgroundImage = (Image)(Properties.Resources.M5);
+            pictureBox6.BackgroundImage = (Image)(Properties.Resources.M6);
+
 
             nameroom1.Text = "Room 101 - 105";
             nameroom2.Text = "Room 106 - 110";
@@ -278,12 +279,12 @@ namespace Acelist.boundary
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            pictureBox1.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\E1.png"));
-            pictureBox2.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\E2.png"));
-            pictureBox3.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\E3.png"));
-            pictureBox4.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\E4.png"));
-            pictureBox5.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\E5.png"));
-            pictureBox6.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\E6.png"));
+            pictureBox1.BackgroundImage = (Image)(Properties.Resources.E1);
+            pictureBox2.BackgroundImage = (Image)(Properties.Resources.E2);
+            pictureBox3.BackgroundImage = (Image)(Properties.Resources.E3);
+            pictureBox4.BackgroundImage = (Image)(Properties.Resources.E4);
+            pictureBox5.BackgroundImage = (Image)(Properties.Resources.E5);
+            pictureBox6.BackgroundImage = (Image)(Properties.Resources.E6);
 
             nameroom1.Text = "Room 201 - 210";
             nameroom2.Text = "Room 211 - 220";
@@ -325,12 +326,12 @@ namespace Acelist.boundary
 
         private void button4_Click(object sender, EventArgs e)
         {
-            pictureBox1.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\K1.png"));
-            pictureBox2.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\K2.png"));
-            pictureBox3.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\K3.png"));
-            pictureBox4.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\K4.png"));
-            pictureBox5.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\K5.png"));
-            pictureBox6.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, @"..\..\..\..\..\img\K6.png"));
+            pictureBox1.BackgroundImage = (Image)(Properties.Resources.K1);
+            pictureBox2.BackgroundImage = (Image)(Properties.Resources.K2);
+            pictureBox3.BackgroundImage = (Image)(Properties.Resources.K3);
+            pictureBox4.BackgroundImage = (Image)(Properties.Resources.K4);
+            pictureBox5.BackgroundImage = (Image)(Properties.Resources.K5);
+            pictureBox6.BackgroundImage = (Image)(Properties.Resources.K6);
 
             nameroom1.Text = "Room 401 - 405";
             nameroom2.Text = "Room 406 - 410";

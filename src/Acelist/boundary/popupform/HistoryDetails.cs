@@ -19,6 +19,8 @@ namespace Acelist.boundary.popupform
         private Customer customer = new Customer();
         private Receptionist receptionist = new Receptionist();
         private Room room = new Room();
+        private DateNightBook dnb;
+
 
         public Panel panelmainmenu;
         public BookHistoryUI bookhistoryui;
@@ -30,6 +32,7 @@ namespace Acelist.boundary.popupform
             this.panelmainmenu = panelmainmenu;
             this.bookhistoryui = bookhistoryui;
             this.bookid = bookid;
+            dnb = new DateNightBook(booking.getArrBookingID(), booking.getArrRoomID(), booking.getArrCheckinTime(), booking.getArrCheckoutTime());
             initialize(bookid);
         }
         public void initialize(int bookid)
@@ -64,7 +67,8 @@ namespace Acelist.boundary.popupform
                     dataGridView1.Rows.Add(idxorder, services, amount, price);
                 }
             }
-            sum = sum + room.getPriceByRoomId(booking.getRoomIdByBookId(this.bookid));
+            int totalnight = dnb.countNightById(bookid);
+            sum = sum + (room.getPriceByRoomId(booking.getRoomIdByBookId(this.bookid)) * totalnight);
             this.labelTotal.Text = "Total: Rp." + sum.ToString();
         }
 
