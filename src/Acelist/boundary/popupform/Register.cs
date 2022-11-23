@@ -18,16 +18,24 @@ namespace Acelist.boundary.popupform
         public string password;
         public string name;
         public string phone;
+        public Label labelbelumpunyaakun;
+        public Label labelregister;
+        public string status;
+
 
         LoginUI loginform;
 
         private Receptionist receptionist = new Receptionist();
-        public Register(LoginUI loginform)
+        public Register(LoginUI loginform, Label labelbelumpunyaakun, Label labelRegister, string status)
         {
             InitializeComponent();
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword2.PasswordChar = '*';
             this.loginform = loginform;
+            this.labelbelumpunyaakun = labelbelumpunyaakun;
+            this.labelregister = labelRegister;
+            this.CenterToScreen();
+            this.status = status;
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
@@ -71,5 +79,22 @@ namespace Acelist.boundary.popupform
                 }
             }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelLogin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            labelbelumpunyaakun.Show();
+            labelregister.Show();
+            labelregister.Enabled = true;
+            loginform.status = "login";
+            loginform.initialize();
+            loginform.Show();
+        }
+
     }
 }

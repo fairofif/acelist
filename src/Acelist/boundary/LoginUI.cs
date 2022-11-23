@@ -93,8 +93,10 @@ namespace Acelist.boundary
             this.status = "register";
             initialize();
             this.Hide();
-            register = new Register(this);
+            register = new Register(this, this.labelBelumPunyaAkun, this.labelRegister, status);
+            register.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             register.ShowDialog();
+            
         }
     }
 }
