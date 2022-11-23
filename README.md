@@ -66,13 +66,10 @@ How To Run:
 4. Double Click "setup.exe" and follow the installing instruction
 5. Double Click "Acelist.exe"
 6. Here are some receptionist user id pass: 
-    1
+    
+    1. username: nasikorea
 
-    username: nasikorea
+      password: nasikorea
 
-    password: nasikorea
-
-    2
-
-    username: nasijepang
-    password: nasijepang
+    2. username: nasijepang
+      password: nasijepang
