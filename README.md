@@ -17,3 +17,51 @@ Maybe you can mention me or this repo in the acknowledgements too
 </div>
 
 <br />
+
+Developer Info:
+
+- @triannasres : David Triannas (18220004)
+
+- @cinnamonboyz : Fikri Muhammad Fahreza (18220012)
+
+- @18220086 : Aldi Fadlian Sunan (18220086)
+
+- @fairofif : Rofif Fairuz Hawary (18220090)
+
+- @18220110 : M. Rizki Pratama (18220110)
+
+
+Branch Info:
+
+Master Branch --> "Release" (Default Branch)
+
+Developing Branch --> "Main"
+
+Feature Branches --> "availability", "roomSpec", "customer", "account", "bookHistory", "unitTest", "graphic"
+
+
+How To Run:
+1. Clone this Repository (git clone https://gitlab.com/fairofif/acelist.git)
+2. Be Sure that you are on Release branch (git checkout Release)
+3. Go to directory "acelist\src\Acelist\bin\publish"
+5. We are using cloud server, So if your public IP address not one of theese (
+
+    110.% or 
+
+    114.124.% or 
+
+    125.% or 
+
+    167.% or 
+
+    180.% or 
+
+    182.% or 
+
+    203.% or 
+
+    45.%) 
+
+    Please contact developers (Rofif Fairuz Hawary, line: rofiffairuzhawary) to register the public internet IP
+4. Double Click "setup.exe" and follow the installing instruction
+5. Double Click "Acelist.exe"
