@@ -25,6 +25,9 @@
     <Compile Update="boundary\popupform\AddOrder.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="boundary\popupform\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="boundary\popupform\HistoryDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -32,6 +35,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="boundary\popupform\NewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="boundary\popupform\PrintBills.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="boundary\popupform\Register.cs">
